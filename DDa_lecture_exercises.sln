@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0_2exercise_TBCpp_study", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1_4exercise_iostream", "1_4exercise_iostream\1_4exercise_iostream.vcxproj", "{4EAF6912-AF87-4A6C-A6B7-D25A4E0530A1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1_5exercise_fuction", "1_5exercise_fuction\1_5exercise_fuction.vcxproj", "{A2CDB913-276D-493F-A0A7-984FE25689F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{4EAF6912-AF87-4A6C-A6B7-D25A4E0530A1}.Release|x64.Build.0 = Release|x64
 		{4EAF6912-AF87-4A6C-A6B7-D25A4E0530A1}.Release|x86.ActiveCfg = Release|Win32
 		{4EAF6912-AF87-4A6C-A6B7-D25A4E0530A1}.Release|x86.Build.0 = Release|Win32
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Debug|x64.ActiveCfg = Debug|x64
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Debug|x64.Build.0 = Debug|x64
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Debug|x86.Build.0 = Debug|Win32
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Release|x64.ActiveCfg = Release|x64
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Release|x64.Build.0 = Release|x64
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Release|x86.ActiveCfg = Release|Win32
+		{A2CDB913-276D-493F-A0A7-984FE25689F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
