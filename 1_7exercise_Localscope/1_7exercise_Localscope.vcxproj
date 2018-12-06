@@ -23,6 +23,7 @@
     <ProjectGuid>{5DB4E6EE-F4AD-4ED3-8B9B-E08C214E756A}</ProjectGuid>
     <RootNamespace>My17exerciseLocalscope</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>1_07exercise_Localscope</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

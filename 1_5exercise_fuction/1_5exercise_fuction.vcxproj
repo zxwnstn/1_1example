@@ -23,6 +23,7 @@
     <ProjectGuid>{A2CDB913-276D-493F-A0A7-984FE25689F0}</ProjectGuid>
     <RootNamespace>My15exercisefuction</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>1_05exercise_fuction</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

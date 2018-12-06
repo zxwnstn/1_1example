@@ -23,7 +23,7 @@
     <ProjectGuid>{D0B1CD07-B261-402B-B6C9-5C5438256FF2}</ProjectGuid>
     <RootNamespace>My01examlpeHellowworld</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>0_1exercise_Hellow_world</ProjectName>
+    <ProjectName>0_01exercise_Hellow_world</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
