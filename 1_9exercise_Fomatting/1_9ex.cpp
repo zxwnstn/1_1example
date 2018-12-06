@@ -2,7 +2,7 @@
 
 1. 여백은 너많이 주지말도록 하자!
 
-2. 줄바꿈 할떄 사소한것을 신경쓰자
+2. 줄바꿈 할때 사소한것을 신경쓰자
 ex) cout << "sdfsd" << "sdfsdf" << "sdlfjiejflsejfl" <<
 		"sdkfjslkjf" << endl; 과 같이
 3. 함수의{} 표시는
