@@ -1,33 +1,33 @@
-1_14°­ ÀüÃ³¸®±â¶õ?
-================
+1_14ê°• ì „ì²˜ë¦¬ê¸°ëž€?
+===================
 
-0. ÀüÃ³¸®±âÀÇ ÀÛµ¿°ú »ç¿ë
+1.ì „ì²˜ë¦¬ê¸°ì˜ ìž‘ë™ê³¼ ì‚¬ìš©
 -----------------------------
-ÀüÃ³¸®±â´Â ºôµå°¡ µÇ±âÀü¿¡ ÀÛµ¿ÀÌ µÈ´Ù.  ÁÖ·Î ¿î¿µÃ¼Á¦°¡(»ç¿ëµÇ´Â ÄÄÆÄÀÏ·¯°¡) window³Ä linux³Ä ±¸ºÐÁöÀ»¶§ »ç¿ëÇÑ´Ù ÀÖ´Ù.
 
-1. ÀüÃ³¸®±â #define
+ ì „ì²˜ë¦¬ê¸°ëŠ” ë¹Œë“œê°€ ë˜ê¸°ì „ì— ìž‘ë™ì´ ëœë‹¤.  ì£¼ë¡œ ìš´ì˜ì²´ì œê°€(ì‚¬ìš©ë˜ëŠ” ì»´íŒŒì¼ëŸ¬ê°€) windowëƒ linuxëƒ êµ¬ë¶„ì§€ì„ë•Œ ì‚¬ìš©í•œë‹¤ ìžˆë‹¤.
+
+2.ì „ì²˜ë¦¬ê¸° #define
 -----------------------------
-¸ÞÅ©·Î ¶ó°íµµ ºÒ¸®¿ì¸ç Áö½ÃÀÚ´Â ´ë¹®ÀÚ·Î ¾²°í, ±× µÚ¿¡ Á¤ÀÇ(ÀÚ·áÇüÀ» ±¸ºÐÇÏÁö ¾ÊÀ½)¸¦ ÇÑ´Ù. ¿ªÈ°Àº ÄÚµå³»¿¡¼­ defineµÈ Áö½ÃÀÚ¸¦ ¸¸³µÀ»¶§, ±×Á¤ÀÇ·Î ´ëÃ¼ ÇØÁØ´Ù´Â °ÍÀÌ´Ù. ¿äÁò¿¡´Â #define º¸´Ù´Â ÇÔ¼ö¸¦ ¸¹ÀÌ ¾´´Ù.
+ ë©”í¬ë¡œ ë¼ê³ ë„ ë¶ˆë¦¬ìš°ë©° ì§€ì‹œìžëŠ” ëŒ€ë¬¸ìžë¡œ ì“°ê³ , ê·¸ ë’¤ì— ì •ì˜(ë‹¨ ìžë£Œí˜•ì€ êµ¬ë¶„í•˜ì§€ ì•ŠëŠ”ë‹¤)ë¥¼ í•œë‹¤. ì—­í™œì€ ì½”ë“œë‚´ì—ì„œ defineëœ ì§€ì‹œìžë¥¼ ë§Œë‚¬ì„ë•Œ, ê·¸ì •ì˜ë¡œ ëŒ€ì²´ í•´ì¤€ë‹¤ëŠ” ê²ƒì´ë‹¤. ìš”ì¦˜ì—ëŠ” #define ë³´ë‹¤ëŠ” í•¨ìˆ˜ë¥¼ ë§Žì´ ì“´ë‹¤.
 	
 	#include<iostream>
 	using namespace std;
 	
 	#define MY_NUMBER 9 
-	#define MAX(a, b) (((a)>(b)) ? (a) : (b))  // 3Ç× ¿¬»êÀÚ, ¸¸¾à a °¡ 1 + 2 ¶ó´Â Çü½ÄÀÌ¶ó¸é a·Î ÁöÁ¤µÇ´Â °ÍÀÌ ¸ðÈ£ÇØÁö±â ¶§¹®¿¡ º¸Åë ()·Î ½ÎÁØ´Ù.	    
-	
-
-	
+	#define MAX(a, b) (((a)>(b)) ? (a) : (b))  // 3í•­ ì—°ì‚°ìž, ë§Œì•½ a ê°€ 1 + 2 ë¼ëŠ” í˜•ì‹ì´ë¼ë©´ aë¡œ 
+						   // ì§€ì •ë˜ëŠ” ê²ƒì´ ëª¨í˜¸í•´ì§€ê¸° ë•Œë¬¸ì— ë³´í†µ ()ë¡œ ì‹¸ì¤€ë‹¤.	    
 	int main()
 	{
-		cout << MY_NUMBER << endl;  // 9°¡ Ãâ·ÂµÊ
-		cout << MAX(1, 2) << endll // 2°¡ Ãâ·ÂµÊ
+		cout << MY_NUMBER << endl;  // 9ê°€ ì¶œë ¥ë¨
+		cout << MAX(1, 2) << endll // 2ê°€ ì¶œë ¥ë¨
 	
 		return 0;	
 	}
 
-2. ÀüÃ³¸®±â #include<algorithm>
+
+3.ì „ì²˜ë¦¬ê¸° #include<algorithm>
 ------------------------------------------
-()¾È¿¡ °¡ÀåÅ« ¼ö¸¦ ¸®ÅÏÇØÁÖ´Â ÇÔ¼ö std::max¸¦ »ç¿ëÇÒ¼ö ÀÕ°Ô ÇØÁØ´Ù.
+ ê°€ìž¥ í°ìˆ˜ë¥¼ ë¦¬í„´í•´ì£¼ëŠ” í•¨ìˆ˜ std::max()ë¥¼ ì‚¬ìš©í• ìˆ˜ ìž‡ê²Œ í•´ì¤€ë‹¤.
 	
 	#include<iostream>
 	#include<algorithm>
@@ -35,16 +35,16 @@
 	
 	int main()
 	{
-		cout << std::max(1 + 3 , 2) << endl; // 4°¡ Ãâ·ÂµÊ
+		cout << std::max(1 + 3 , 2) << endl; // 4ê°€ ì¶œë ¥ë¨
 		return 0;
 	}
 	
 
-3. ÀüÃ³¸®±âÀÇ È¿·Â¹üÀ§
+4.ì „ì²˜ë¦¬ê¸°ì˜ íš¨ë ¥ë²”ìœ„
 --------------------------------------
-ÀüÃ³¸®±âÀÇ È¿·Â¹üÀ§´Â ÀüÃ³¸®±â°¡ ÀûÇôÁø ±× cpp ÆÄÀÏ ¾È¿¡¼­¸¸ÀÌ´Ù. ÀÌ°ÍÀ» È®ÀÎÇØº¸±â À§ÇÑ ÇÔ¼ö¸¦ »ìÆìº¸ÀÚ.
+ ì „ì²˜ë¦¬ê¸°ì˜ íš¨ë ¥ë²”ìœ„ëŠ” ì „ì²˜ë¦¬ê¸°ê°€ ì í˜€ì§„ ê·¸ cpp íŒŒì¼ ì•ˆì—ì„œë§Œì´ë‹¤. ì´ê²ƒì„ í™•ì¸í•´ë³´ê¸° ìœ„í•œ í•¨ìˆ˜ë¥¼ ì‚´íŽ´ë³´ìž.
 
-#### ¼Ö·ç¼Ç1ÀÇ preprocessor.cpp
+#### ì†”ë£¨ì…˜1ì˜ preprocessor.cpp
 	
 	#include<include>
 	#define LIKE_APPLE
@@ -56,10 +56,10 @@
 		return 0;
 	}
 
-cf) #define LIKE_APPLE µÚ¿¡ ¾Æ¹«°Íµµ ¾ø±â‹š¹®¿¡ Á¤ÀÇ µÈ°Ô ¾Æ´ÏÁö ¾Ê´À³Ä?
-ÀüÃ³¸®±â ¾È¿¡¼­´Â ±×·¸°Ô ÀÛµ¿ÇÏÁö(µÚ¿¡ Á¤ÀÇ·Î ±³Ã¼°¡ µÇÁö¾ÊÀ½) ¾Ê±â ‹š¹®¿¡ ÀÏ´ÜÀº Á¤ÀÇ µÈ°ÍÀ¸·Î ½ÇÇàÇÑ´Ù.
+ cf) #define LIKE_APPLE ë’¤ì— ì•„ë¬´ê²ƒë„ ì—†ê¸°ë•Œë¬¸ì— ì •ì˜ ëœê²Œ ì•„ë‹ˆì§€ ì•ŠëŠëƒ?
+ì „ì²˜ë¦¬ê¸° ì•ˆì—ì„œëŠ” ê·¸ë ‡ê²Œ ìž‘ë™í•˜ì§€(ë’¤ì— ì •ì˜ë¡œ êµì²´ê°€ ë˜ì§€ì•ŠìŒ) ì•Šê¸° ë•Œë¬¸ì— ì¼ë‹¨ì€ ì •ì˜ ëœê²ƒìœ¼ë¡œ ì‹¤í–‰í•œë‹¤.
 
-#### ¼Ö·ç¼Ç1ÀÇ function.cpp
+#### ì†”ë£¨ì…˜1ì˜ function.cpp
 	
 	#include<iostream>
 	using namespace std;
@@ -74,7 +74,7 @@ cf) #define LIKE_APPLE µÚ¿¡ ¾Æ¹«°Íµµ ¾ø±â‹š¹®¿¡ Á¤ÀÇ µÈ°Ô ¾Æ´ÏÁö ¾Ê´À³Ä?
 	}
 
 
-ÀÌ°æ¿ì¿¡ ¸ÞÀÎÇÔ¼ö°¡ ÀÖ´Â preprocessor.cpp¿¡´Â LIKE_APPLEÀÌ define µÇ¾îÀÖ¾î ¸¶Ä¡ APPLEÀÌ ³ª¿Ã°Í °°À¸³ª, ÇÔ¼ö dosomethingÀÌ Á¤ÀÇµÈ function.cpp ¿¡¼­´Â ÀüÃ³¸®±â·Î define µÇ¾î ÀÖÁö ¾Ê±â ¶§¹®¿¡ ORANGE°¡ Ãâ·ÂÀÌµÈ´Ù.
+ ì´ê²½ìš°ì— ë©”ì¸í•¨ìˆ˜ê°€ ìžˆëŠ” preprocessor.cppì—ëŠ” LIKE_APPLEì´ define ë˜ì–´ìžˆì–´ ë§ˆì¹˜ APPLEì´ ë‚˜ì˜¬ê²ƒ ê°™ìœ¼ë‚˜, í•¨ìˆ˜ dosomethingì´ ì •ì˜ëœ function.cpp ì—ì„œëŠ” ì „ì²˜ë¦¬ê¸°ë¡œ define ë˜ì–´ ìžˆì§€ ì•Šê¸° ë•Œë¬¸ì— ORANGEê°€ ì¶œë ¥ì´ëœë‹¤.
 
 
 
