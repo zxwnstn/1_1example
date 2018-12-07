@@ -1,5 +1,5 @@
 #include<iostream>
-#define MY_NUMBER 9
+#define MY_NUMBER 10
 #define MY_APPLE
 using namespace std;
 void dosomething();
