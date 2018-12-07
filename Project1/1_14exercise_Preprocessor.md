@@ -4,7 +4,7 @@
 1.전처리기의 작동과 사용
 -----------------------------
 
- 전처리기는 빌드가 되기전에 작동이 된다.  주로 운영체제가(사용되는 컴파일러가) window냐 linux냐 구분지을때 사용한다 있다.
+ 전처리기는 빌드가 되기전에 작동이 된다.  주로 운영체제가(사용되는 컴파일러가) _window_ 냐 _linux_ 냐 구분지을때 사용할수 있다.
 
 2.전처리기 #define
 -----------------------------
@@ -44,7 +44,7 @@
 --------------------------------------
  전처리기의 효력범위는 전처리기가 적혀진 그 cpp 파일 안에서만이다. 이것을 확인해보기 위한 를 살펴보자.
 
-#### 솔루션1의 preprocessor.cpp
+#### *솔루션1의 preprocessor.cpp
 	
 	#include<include>
 	#define LIKE_APPLE
@@ -55,7 +55,7 @@
 		dosomething();
 		return 0;
 	}
-#### 솔루션1의 function.cpp
+#### *솔루션1의 function.cpp
 	
 	#include<iostream>
 	using namespace std;
