@@ -1,5 +1,6 @@
 ## 2-1강 기본 자료형 소개
 <br>
+
 ### 개요
 자료형은 여러가지가 있으며, 각 자료형마다 저장되는 방식과 사이즈가 조금씩 다르다.
 
@@ -55,7 +56,9 @@ Null pointer|	decltype(nullptr)	|
 6. float과 double의 차이는 단순 저장크기이다. double은 float의 2배이다.
 7. bool type은 진리형(true, false)의 자료타입이다.
 <br>
+
 ### 각 자료형의 초기화 형태
+
     #include<iostream>
     using namespace std;
 
@@ -83,12 +86,14 @@ Null pointer|	decltype(nullptr)	|
         cout << sizeof(aValue2) << endl; // 4
 
         return 0;
-    }
+    } 
 
 1. bool 은 숫자로 저장된다.
 2. auto(auto deduction) 는 빌드될때 자료형을 판별하여 결정한다.
 <br>
+
 ### cpp의 변수 초기화 방법
+
 1. coppy initialization
 2. int a(123); direct initialization
 3. int b{123}; uniform initialization
@@ -96,6 +101,7 @@ Null pointer|	decltype(nullptr)	|
 >cf)객체지향을 하게 되면 데이터 타입을 만들어 사용할 수 있다. 그때 초기화 할때는 2, 3의 방식을 많이 쓴다.
 
 ###### Casting과 변수 초기화
+
     #include<iostream>
     using namespace std;
 
@@ -114,5 +120,6 @@ Null pointer|	decltype(nullptr)	|
 b가 출력이 안되는 이유는 uniform initialization 이 엄격하게 따지기 때문이다.    
 <br>
 ### 변수 선언의 위치
+
 1. 예전에는 사용할 변수를 코드 위에 전부 선언하고 코딩을 하였으나, 요즘에는 사용할 변수는 사용하기 직전에 선언하는 것을 선호
 2. 변수와 그 변수를 사용하는 코드가 가까워지면 debuging 이나 refactoring 하기 편리해진다.
