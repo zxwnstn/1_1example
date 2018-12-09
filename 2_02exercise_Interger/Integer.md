@@ -84,10 +84,12 @@ short는 4byte크기이므로 16bit이다. 그렇다면 총 2의 16승 가지수
 		using namespace std;
 
 		short s = std::numeric_limits<short>::max();
-		cout << s+1 << endl;
+		s = s+1
+		cout << s << endl;
 		
 		s=std::numeric_limits<short>::min();
-		cout << s-1 << endl;
+		s = s-1
+		cout << s << endl;
 
 		return 0;
 	}
