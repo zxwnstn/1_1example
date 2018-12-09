@@ -1,14 +1,14 @@
-##Bool °ú If
+## Bool ê³¼ If
 
 <br>
 
-### °³¿ä
-boolÀº °¡Áú¼ö ÀÖ´Â °ªÀÌ true, 1°ú false 0 ¹Û¿¡ ¾ø´Ù.
+### ê°œìš”
+boolì€ ê°€ì§ˆìˆ˜ ìžˆëŠ” ê°’ì´ true, 1ê³¼ false 0 ë°–ì— ì—†ë‹¤.
 
 <br>
 
-### ÃÊ±âÈ­
-boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
+### ì´ˆê¸°í™”
+boolë„ ë‹¤ë¥¸ ìžë£Œí˜•ê³¼ ë§ˆì°¬ê°€ì§€ë¡œ ì„ ì–¸, ì´ˆê¸°í™”ë¥¼ í• ìˆ˜ìžˆë‹¤.
 
 	#include<iostream>
 
@@ -24,7 +24,7 @@ boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
 		cout << b3 << endl; // 0
 		cout << b1 << endl;	// 1
 
-		//true false·Î º¸°í½Í´Ù¸é?
+		//true falseë¡œ ë³´ê³ ì‹¶ë‹¤ë©´?
 		cout << std::boolalpha;
 		cout << b3 << endl; // 0
 		cout << b1 << endl;
@@ -35,17 +35,19 @@ boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
 
 		return 0;
 	}
->not operator !´Â Áø¸® ¿¬»ê¿¡¼­ °¡´ÉÇÏ¸é ¾È¾²´Â°ÍÀÌ ÁÁÀ¸¸ç, ¶ç¾î¾²Áö ¾Ê´Â´Ù.
+>not operator !ëŠ” ì§„ë¦¬ ì—°ì‚°ì—ì„œ ê°€ëŠ¥í•˜ë©´ ì•ˆì“°ëŠ”ê²ƒì´ ì¢‹ìœ¼ë©°, ë„ì–´ì“°ì§€ ì•ŠëŠ”ë‹¤.
 
 <br>
 
-### ³í¸® ¿¬»êÀÚ
-1. && : and ¿¬»êÀÚ
-2. || : or ¿¬»êÀÚ
-3. ¿¬»ê¹æ¹ýÀº ¼öÇÐÀÇ Áø¸®¿¬»ê°ú °°´Ù.
+### ë…¼ë¦¬ ì—°ì‚°ìž
+
+1. && : and ì—°ì‚°ìž
+2. || : or ì—°ì‚°ìž
+3. ì—°ì‚°ë°©ë²•ì€ ìˆ˜í•™ì˜ ì§„ë¦¬ì—°ì‚°ê³¼ ê°™ë‹¤.
+<br>
 
 	#include<iostream>
-
+	
 	int(main)
 	{
 		cout << std::boolalpha;
@@ -53,13 +55,13 @@ boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
 		cout << true && false << endl;	// false
 		cout << true || false << endl;	// true
 		cout << false || false << endl;	// false
-
+		
 		return 0;
 	}
 
 <br>
 
-### if¹®
+### ifë¬¸
 
 	#include<iostream>
 
@@ -76,17 +78,16 @@ boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
 		return 0;
 	}
 
-1. ±¸Á¶´Â if (Á¶°Ç) {½ÇÇà} (´Ü ¸í·ÉÀÌ 1ÁÙÀÏ¶§´Â {}¸¦ ¾È½áµµµÈ´Ù.)
-2. Á¶°ÇÀÇ boolÅ¸ÀÔ¿¡ ÀÇÇØ ½ÇÇàÀÌ µÉÁö ¾ÈµÉÁö°¡ °áÁ¤ÀÌµÈ´Ù.
-3. else´Â if°¡ ¾Æ´Ò¶§ ½ÇÇàµÈ´Ù.
-4. Á¶°Ç¹®¿¡¼­ 0Àº false ÀÌÁö¸¸ ±× ÀÌ¿ÜÀÇ °ÍµéÀº ¸ðµÎ true´Ù.
-   ´Ù½Ã¸»ÇØ¼­ if (5) ¶ó ÇÔÀº, true°¡ µÇ´Â °ÍÀÌ´Ù.
+1. êµ¬ì¡°ëŠ” if (ì¡°ê±´) {ì‹¤í–‰} (ë‹¨ ëª…ë ¹ì´ 1ì¤„ì¼ë•ŒëŠ” {}ë¥¼ ì•ˆì¨ë„ëœë‹¤.)
+2. ì¡°ê±´ì˜ boolíƒ€ìž…ì— ì˜í•´ ì‹¤í–‰ì´ ë ì§€ ì•ˆë ì§€ê°€ ê²°ì •ì´ëœë‹¤.
+3. elseëŠ” ifê°€ ì•„ë‹ë•Œ ì‹¤í–‰ëœë‹¤.
+4. ì¡°ê±´ë¬¸ì—ì„œ 0ì€ false ì´ì§€ë§Œ ê·¸ ì´ì™¸ì˜ ê²ƒë“¤ì€ ëª¨ë‘ trueë‹¤. ë‹¤ì‹œë§í•´ì„œ if (5) ë¼ í•¨ì€, trueê°€ ë˜ëŠ” ê²ƒì´ë‹¤.
 
 <br>
 
-### boolÀÚ·áÇüÀÇ ÀÌ¿ë
+### boolìžë£Œí˜•ì˜ ì´ìš©
 
-###### ÇÔ¼öÀÇ ¸®ÅÏ
+###### í•¨ìˆ˜ì˜ ë¦¬í„´
 	#include<iostream>
 
 	bool isEqual(int a, int b)
@@ -103,13 +104,13 @@ boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
 
 		return 0;
 	}
->bool ÀÚ·áÇüÀ» ÀÔ·Â¹ÞÀ»¶§ ¹®ÀÚ ±×´ë·Î true, false·Î ÀÔ·ÂÇÏ¸é ¾ÈµÈ´Ù.
-0ÀÌ ¾Æ´Ñ ¸ðµç ±ÛÀÚ¿¡ ´ëÇØ true·Î ¹Þ¾ÆµéÀÌ±â ¶§¹®ÀÌ´Ù.
+>bool ìžë£Œí˜•ì„ ìž…ë ¥ë°›ì„ë•Œ ë¬¸ìž ê·¸ëŒ€ë¡œ true, falseë¡œ ìž…ë ¥í•˜ë©´ ì•ˆëœë‹¤.
+0ì´ ì•„ë‹Œ ëª¨ë“  ê¸€ìžì— ëŒ€í•´ trueë¡œ ë°›ì•„ë“¤ì´ê¸° ë•Œë¬¸ì´ë‹¤.
 
 <br>
 
-### ¼÷Á¦
-+Á¤¼ö ÇÏ³ª¸¦ ÀÔ·Â¹Þ°í ±×¼ýÀÚ°¡ È¦¼öÀÎÁö Â¦¼öÀÎÁö Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ¸¸µé¾î º¾½Ã´Ù.
+### ìˆ™ì œ
++ì •ìˆ˜ í•˜ë‚˜ë¥¼ ìž…ë ¥ë°›ê³  ê·¸ìˆ«ìžê°€ í™€ìˆ˜ì¸ì§€ ì§ìˆ˜ì¸ì§€ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ë§Œë“¤ì–´ ë´…ì‹œë‹¤.
 
 	#include<iostream>
 	using namespace std;
@@ -117,10 +118,10 @@ boolµµ ´Ù¸¥ ÀÚ·áÇü°ú ¸¶Âù°¡Áö·Î ¼±¾ð, ÃÊ±âÈ­¸¦ ÇÒ¼öÀÖ´Ù.
 	void Is_Equal_Odd(int a)
 	{
 		if (a % 2 == 0)
-			cout << "Â¦¼öÀÔ´Ï´Ù" << endl;
+			cout << "ì§ìˆ˜ìž…ë‹ˆë‹¤" << endl;
 
 		else	
-			cout << "È¦¼öÀÔ´Ï´Ù" << endl;
+			cout << "í™€ìˆ˜ìž…ë‹ˆë‹¤" << endl;
 	}
 
 	int main()
