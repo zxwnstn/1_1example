@@ -1,7 +1,7 @@
-## °íÁ¤ ³Êºñ Á¤¼ö Fixed width Integers
+## 2-3ê°• ê³ ì • ë„ˆë¹„ ì •ìˆ˜ Fixed width Integers
 
-cppÇ¥ÁØ¿¡¼­´Â µ¥ÀÌÅÍ »çÀÌÁî´Â ÃÖ¼Ò »çÀÌÁî¸¸À» ±ÔÁ¤ÇÏ°í ÀÖ´Ù. ÀÌ ¶§¹®¿¡ ÇÃ·§Æû¸¶´Ù ½ÇÁ¦ ±ÔÇöµÈ »çÀÌÁî°¡ ´Ù¸¦¼öµµ ÀÖ´Âµ¥,
-c++11 ÀÌ»óºÎÅÍ´Â ¾î´À ÇÃ·§Æû ¿¡¼­µµ ¶È°°Àº »çÀÌÁî¸¦ Á¦°øÇÏ´Â °íÁ¤ ³Êºñ Á¤¼ö¸¦ »ç¿ëÇÒ¼ö ÀÖ´Ù.
+cppí‘œì¤€ì—ì„œëŠ” ë°ì´í„° ì‚¬ì´ì¦ˆëŠ” ìµœì†Œ ì‚¬ì´ì¦ˆë§Œì„ ê·œì •í•˜ê³  ìžˆë‹¤. ì´ ë•Œë¬¸ì— í”Œëž«í¼ë§ˆë‹¤ ì‹¤ì œ ê·œí˜„ëœ ì‚¬ì´ì¦ˆê°€ ë‹¤ë¥¼ìˆ˜ë„ ìžˆëŠ”ë°,
+c++11 ì´ìƒë¶€í„°ëŠ” ì–´ëŠ í”Œëž«í¼ ì—ì„œë„ ë˜‘ê°™ì€ ì‚¬ì´ì¦ˆë¥¼ ì œê³µí•˜ëŠ” ê³ ì • ë„ˆë¹„ ì •ìˆ˜ë¥¼ ì‚¬ìš©í• ìˆ˜ ìžˆë‹¤.
 
     #include<iostream>
 	
@@ -9,17 +9,17 @@ c++11 ÀÌ»óºÎÅÍ´Â ¾î´À ÇÃ·§Æû ¿¡¼­µµ ¶È°°Àº »çÀÌÁî¸¦ Á¦°øÇÏ´Â °íÁ¤ ³Êºñ Á¤¼ö¸¦ »ç
 	{
 	using namespace std;
 
-	std::int16_t i(5);			  // intÀÇ short(2byte) Å¸ÀÔÀ¸·Î ÁöÁ¤µÈ´Ù.
-	std::int8_t myint = 65;		  // char(1byte) Å¸ÀÔÀ¸·Î ÁöÁ¤µÈ´Ù.
+	std::int16_t i(5);			  // intì˜ short(2byte) íƒ€ìž…ìœ¼ë¡œ ì§€ì •ëœë‹¤.
+	std::int8_t myint = 65;		  // char(1byte) íƒ€ìž…ìœ¼ë¡œ ì§€ì •ëœë‹¤.
 
  	cout << myint << endl;
 
- 	std::int_fast8_t fi(5);           // 8bit »çÀÌÁî Áß¿¡ °¡Àå ºü¸¥ µ¥ÀÌÅÍ Å¸ÀÔ (charÅ¸ÀÔÀ¸·Î ÀúÀåµÈ´Ù.)
-	std::int_least64_t fi(5);          // Àû¾îµµ 64bit¸¦ °®´Â µ¥ÀÌÅÍ Å¸ÀÔ (_int64Å¸ÀÔÀ¸·Î ÁöÁ¤µÈ´Ù.)
+ 	std::int_fast8_t fi(5);           // 8bit ì‚¬ì´ì¦ˆ ì¤‘ì— ê°€ìž¥ ë¹ ë¥¸ ë°ì´í„° íƒ€ìž… (charíƒ€ìž…ìœ¼ë¡œ ì €ìž¥ëœë‹¤.)
+	std::int_least64_t fi(5);          // ì ì–´ë„ 64bitë¥¼ ê°–ëŠ” ë°ì´í„° íƒ€ìž… (_int64íƒ€ìž…ìœ¼ë¡œ ì§€ì •ëœë‹¤.)
 
 	cout << sizeof(fi) << " " << sizeof(fi_2) << endl;
 
 	return 0;
 	}
 
-¸ÖÆ¼ÇÃ·§Æû ÇÁ·Î±×·¡¹ÖÀ» ¸¹ÀÌ ÇÑ´Ù¸é º¯¼öÀÇ ³Êºñ¸¦ ÅëÀÏ(°íÁ¤)½ÃÅ°´Â°ÍÀÌ ÇÁ·Î±×·¥ ¾ÈÁ¤¼º¿¡ ÀÖ¾î¼­ ¸Å¿ì Áß¿äÇÏ±â ¶§¹®¿¡ ÀÌ·¯ÇÑ °íÁ¤ ³Êºñ Á¤¼ö¸¦ Àû±Ø È°¿ëÇÒ¼öÀÖ´Ù.
+>ë©€í‹°í”Œëž«í¼ í”„ë¡œê·¸ëž˜ë°ì„ ë§Žì´ í•œë‹¤ë©´ ë³€ìˆ˜ì˜ ë„ˆë¹„ë¥¼ í†µì¼(ê³ ì •)ì‹œí‚¤ëŠ”ê²ƒì´ í”„ë¡œê·¸ëž¨ ì•ˆì •ì„±ì— ìžˆì–´ì„œ ë§¤ìš° ì¤‘ìš”í•˜ê¸° ë•Œë¬¸ì— ì´ëŸ¬í•œ ê³ ì • ë„ˆë¹„ ì •ìˆ˜ë¥¼ ì ê·¹ í™œìš©í• ìˆ˜ìžˆë‹¤.
