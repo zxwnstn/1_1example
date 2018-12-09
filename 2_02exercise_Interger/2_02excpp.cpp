@@ -23,7 +23,7 @@ int main()
 	short s2 = std::numeric_limits<short>::max();
 	cout << "최대 s는" << s2 << " s+1은" << s2 + 1 << endl;
 	s2 = std::numeric_limits<short>::min();
-	cout << "최소 s는" << s2 << " s-1은" << s2 - 1 << endl; // 잘 되지 않음..
+	cout << "최소 s는" << s2 << " s-1은" << s2 - 1 << endl; // 잘 되지 않음.. 무엇이 잘못되었나?
 
 	return 0;
 }
