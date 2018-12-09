@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_03exercise_FixedWidthInte
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_04exercise_Void", "2_04exercise_Void\2_04exercise_Void.vcxproj", "{7DE13E3C-54A4-4B68-96B9-F0CD05F4A22E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_05exercise_FloatingPointNumbers", "2_05exercise_FloatingPointNumbers\2_05exercise_FloatingPointNumbers.vcxproj", "{52960969-0787-4465-8089-753C3738A4B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{7DE13E3C-54A4-4B68-96B9-F0CD05F4A22E}.Release|x64.Build.0 = Release|x64
 		{7DE13E3C-54A4-4B68-96B9-F0CD05F4A22E}.Release|x86.ActiveCfg = Release|Win32
 		{7DE13E3C-54A4-4B68-96B9-F0CD05F4A22E}.Release|x86.Build.0 = Release|Win32
+		{52960969-0787-4465-8089-753C3738A4B6}.Debug|x64.ActiveCfg = Debug|x64
+		{52960969-0787-4465-8089-753C3738A4B6}.Debug|x64.Build.0 = Debug|x64
+		{52960969-0787-4465-8089-753C3738A4B6}.Debug|x86.ActiveCfg = Debug|Win32
+		{52960969-0787-4465-8089-753C3738A4B6}.Debug|x86.Build.0 = Debug|Win32
+		{52960969-0787-4465-8089-753C3738A4B6}.Release|x64.ActiveCfg = Release|x64
+		{52960969-0787-4465-8089-753C3738A4B6}.Release|x64.Build.0 = Release|x64
+		{52960969-0787-4465-8089-753C3738A4B6}.Release|x86.ActiveCfg = Release|Win32
+		{52960969-0787-4465-8089-753C3738A4B6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
