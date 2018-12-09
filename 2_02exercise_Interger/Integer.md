@@ -1,31 +1,31 @@
-## Á¤¼öÇü Integers
+## 2-2ê°• ì •ìˆ˜í˜• Integers
 
 <br>
 
-### Å©±â
+### í¬ê¸°
 
-¿µ¿ª Category|Çü Type | ÃÖ¼Ò Å©±â | ±âÅ¸
+ì˜ì—­ Category|í˜• Type | ìµœì†Œ í¬ê¸° | ê¸°íƒ€
 -------------|--------|---------|------------
-¹®ÀÚ character|char|1byte|
-Á¤¼ö integer | Short | 2byte|
-<br> | int | 2byte | ´ëºÎºÐ 4byte
+ë¬¸ìž character|char|1byte|
+ì •ìˆ˜ integer | Short | 2byte|
+<br> | int | 2byte | ëŒ€ë¶€ë¶„ 4byte
 <br> | long | 4byte | 
 <br> | long long | 8byte | c99/c++11 type
 
->cf)¸¹Àº ÇÁ·Î±×·¡¸Ó Æ¯È÷ ³×Æ®¿öÅ©¸¦ »ç¿ëÇÏ´Â ÇÁ·Î±×·¡¸ÓÀÇ °æ¿ì, charÅ¸ÀÔÀ» ÃÖ¼ÒÅ©±â ÀúÀå¼Ò °³³äÀ¸·Î »ç¿ëÇÏ´Â °æ¿ì°¡ ¸¹´Ù.
+>cf)ë§Žì€ í”„ë¡œê·¸ëž˜ë¨¸ íŠ¹ížˆ ë„¤íŠ¸ì›Œí¬ë¥¼ ì‚¬ìš©í•˜ëŠ” í”„ë¡œê·¸ëž˜ë¨¸ì˜ ê²½ìš°, charíƒ€ìž…ì„ ìµœì†Œí¬ê¸° ì €ìž¥ì†Œ ê°œë…ìœ¼ë¡œ ì‚¬ìš©í•˜ëŠ” ê²½ìš°ê°€ ë§Žë‹¤.
 
 <br>
 
-### ÀúÀå±¸Á¶
+### ì €ìž¥êµ¬ì¡°
 int i = 1;
-0000000 | 0000000 | 00000000 | 00000001 (½ÇÁ¦ ¸Þ¸ð¸®¿¡ ÀúÀåµÇ´Â iÀÇ ÇüÅÂ)
-Int ÀÚ·áÇüÀÇ °æ¿ì ÃÑ 4byte·Î ÇÑ ¼ýÀÚ¸¦ ÀúÀåÇÏ¸ç, ¸Ç¾ÕÀÇ ÇÑ ºñÆ®´Â ºÎÈ£ÆÇµ¶(0ÀÏ½Ã ¾ç¼ö, 1ÀÏ½Ã À½¼ö)¿¡ »ç¿ëÇÑ´Ù
+0000000 | 0000000 | 00000000 | 00000001 (ì‹¤ì œ ë©”ëª¨ë¦¬ì— ì €ìž¥ë˜ëŠ” iì˜ í˜•íƒœ)<br>
+Int ìžë£Œí˜•ì˜ ê²½ìš° ì´ 4byteë¡œ í•œ ìˆ«ìžë¥¼ ì €ìž¥í•˜ë©°, ë§¨ì•žì˜ í•œ ë¹„íŠ¸ëŠ” ë¶€í˜¸íŒë…(0ì¼ì‹œ ì–‘ìˆ˜, 1ì¼ì‹œ ìŒìˆ˜)ì— ì‚¬ìš©í•œë‹¤
 
 <br>
 
-###Å©±â È®ÀÎÀ» À§ÇÑ ÄÚµå
+###í¬ê¸° í™•ì¸ì„ ìœ„í•œ ì½”ë“œ
 
-###### intÇü ÀÚ·áµéÀÇ Å©±â È®ÀÎ
+###### intí˜• ìžë£Œë“¤ì˜ í¬ê¸° í™•ì¸
 	#include<iostream>
 
 	int main()
@@ -43,12 +43,12 @@ Int ÀÚ·áÇüÀÇ °æ¿ì ÃÑ 4byte·Î ÇÑ ¼ýÀÚ¸¦ ÀúÀåÇÏ¸ç, ¸Ç¾ÕÀÇ ÇÑ ºñÆ®´Â ºÎÈ£ÆÇµ¶(0ÀÏ½Ã
 
 		return 0;
 	}
-short´Â 4byteÅ©±âÀÌ¹Ç·Î 16bitÀÌ´Ù. ±×·¸´Ù¸é ÃÑ 2ÀÇ 16½Â °¡Áö¼ö ¸¸Å­ ¼ö¸¦ Ç¥ÇöÇÒ¼öÀÖ´Â°¡? 
-¾Æ´Ï´Ù. ¸Ç¾ÕÀÇ ÇÑºñÆ®´Â ºÎÈ£¸¦ Ç¥ÇöÇØ¾ß ÇÏ¹Ç·Î »ç¿ë°¡´ÉÇÑ ºñÆ®¼ö´Â 15°³°¡ µÇ¸ç ¶ÇÇÑ 0À» Æ÷ÇÔÇØ¾ß ÇÑ´Ù. 
-Áï Ç¥Çö °¡´ÉÇÑ ¼öÀÇ °¡Áö¼ö´Â 2ÀÇ 15½Â »©±â 1, Áï 32767°³ÀÎ °ÍÀÌ´Ù.
+shortëŠ” 4byteí¬ê¸°ì´ë¯€ë¡œ 16bitì´ë‹¤. ê·¸ë ‡ë‹¤ë©´ ì´ 2ì˜ 16ìŠ¹ ê°€ì§€ìˆ˜ ë§Œí¼ ìˆ˜ë¥¼ í‘œí˜„í• ìˆ˜ìžˆëŠ”ê°€?<br>
+**ì•„ë‹ˆë‹¤**. ë§¨ì•žì˜ í•œë¹„íŠ¸ëŠ” ë¶€í˜¸ë¥¼ í‘œí˜„í•´ì•¼ í•˜ë¯€ë¡œ ì‚¬ìš©ê°€ëŠ¥í•œ ë¹„íŠ¸ìˆ˜ëŠ” 15ê°œê°€ ë˜ë©° ë˜í•œ 0ì„ í¬í•¨í•´ì•¼ í•œë‹¤.<br>
+ì¦‰ í‘œí˜„ ê°€ëŠ¥í•œ ìˆ˜ì˜ ê°€ì§€ìˆ˜ëŠ” 2ì˜ 15ìŠ¹ ë¹¼ê¸° 1, ì¦‰ 32767ê°œì¸ ê²ƒì´ë‹¤.
 
 
-######  short ¹üÀ§ È®ÀÎ ÄÚµå
+######  short ë²”ìœ„ í™•ì¸ ì½”ë“œ
 	#include<iostream>
 	#include<cmath>
 	#include<limits>
@@ -60,20 +60,20 @@ short´Â 4byteÅ©±âÀÌ¹Ç·Î 16bitÀÌ´Ù. ±×·¸´Ù¸é ÃÑ 2ÀÇ 16½Â °¡Áö¼ö ¸¸Å­ ¼ö¸¦ Ç¥ÇöÇÒ¼
 		cout << std::pow(2, sizeof(short)*8-1)-1 << endl;
 		cout << std::numeric_limits<short>::max() << endl;
 		cout << std::numeric_limits<short>::min() << endl;
-		cout << std::numeric_limits<short>::lowest() << endl;  // lowest¿Í minÀÇ Â÷ÀÌ?
+		cout << std::numeric_limits<short>::lowest() << endl;  // lowestì™€ minì˜ ì°¨ì´?
 
 		return 0;
 	}
-1.pow(x , y)ÇÔ¼ö´Â xÀÇ y½ÂÀ» °è»êÇØÁÖ´Â ÇÔ¼öÀÌ´Ù.
-2.numeric_limits<short>´Â ÀÚ·áÇüÀÇ ¹üÀ§¸¦ Ãâ·ÂÇØ ÁÖ´Â ÇÔ¼öÀÌ´Ù.
+1. pow(x , y)í•¨ìˆ˜ëŠ” xì˜ yìŠ¹ì„ ê³„ì‚°í•´ì£¼ëŠ” í•¨ìˆ˜ì´ë‹¤.
+2. numeric_limits<short>ëŠ” ìžë£Œí˜•ì˜ ë²”ìœ„ë¥¼ ì¶œë ¥í•´ ì£¼ëŠ” í•¨ìˆ˜ì´ë‹¤.
 
 <br>
 
 ### Overflow
 
-¸Þ¸ð¸®¿¡ ÀúÀåÇÑ ÀÚ·áÇüÀÇ Å©±â°¡ ±× ÇÑ°èÄ¡¸¦ ³Ñ¾úÀ»¶§ ¹ß»ýÇÏ´Â Çö»óÀÌ´Ù. °ú¿¬ ¾î¶»°Ô µÇ´ÂÁö ÄÚµå·Î È®ÀÎÇØ º¸ÀÚ.
+ë©”ëª¨ë¦¬ì— ì €ìž¥í•œ ìžë£Œí˜•ì˜ í¬ê¸°ê°€ ê·¸ í•œê³„ì¹˜ë¥¼ ë„˜ì—ˆì„ë•Œ ë°œìƒí•˜ëŠ” í˜„ìƒì´ë‹¤. ê³¼ì—° ì–´ë–»ê²Œ ë˜ëŠ”ì§€ ì½”ë“œë¡œ í™•ì¸í•´ ë³´ìž.
 
-###### Overflow¸¦ ¹ß»ý½ÃÅ°´Â ÄÚµå
+###### Overflowë¥¼ ë°œìƒì‹œí‚¤ëŠ” ì½”ë“œ
 	
 	#include<iostream>
 	#include<cmath>
