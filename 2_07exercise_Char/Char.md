@@ -1,15 +1,15 @@
-## 2-7 ¹®ÀÚÇü
+## 2-7ê°• ë¬¸ìží˜•
 
-ÄÄÇ»ÅÍ ³»ºÎ¿¡¼± ÀüºÎ ¼ýÀÚ·Î Ç¥Çö
-¹®ÀÚ¸¦ ¾î¶»°Ô ¼ýÀÚ·Î Ç¥ÇöÇÏ³ª?
+ì»´í“¨í„° ë‚´ë¶€ì—ì„  ì „ë¶€ ìˆ«ìžë¡œ í‘œí˜„
+ë¬¸ìžë¥¼ ì–´ë–»ê²Œ ìˆ«ìžë¡œ í‘œí˜„í•˜ë‚˜?
 <br>
-### ¾Æ½ºÅ°Å×ÀÌºí 
+### ì•„ìŠ¤í‚¤í…Œì´ë¸” 
 
-1.¾î¶² ¼ýÀÚ°¡ ¾î¶² ¹®ÀÚ¿Í ´ëÀÀÀÌ µÇ´ÂÁö Á¤ÇØ³õÀ½
+1. ì–´ë–¤ ìˆ«ìžê°€ ì–´ë–¤ ë¬¸ìžì™€ ëŒ€ì‘ì´ ë˜ëŠ”ì§€ ì •í•´ë†“ìŒ
 2. 1~32 unprintable
-3. 33~ ¹®ÀÚ È¤Àº Æ¯¼ö±âÈ£
+3. 33ì´ìƒ ë¶€í„°ëŠ” ë¬¸ìž í˜¹ì€ íŠ¹ìˆ˜ê¸°í˜¸
 <br>
-### charÀÇ »ç¿ë¿¹
+### charì˜ ì‚¬ìš©ì˜ˆ
 
 	include<iostream>
 	include<limits>
@@ -19,20 +19,20 @@
 		using namepace std;
 
 		char c1(65);
-		char c2('a') // ÇÑ±ÛÀÚ´Â ''»ç¿ë
-		char c3("Hello, world") // ¹®ÀÚ¿­¿¡´Â ""»ç¿ë
+		char c2('a') // í•œê¸€ìžëŠ” ''ì‚¬ìš©
+		char c3("Hello, world") // ë¬¸ìžì—´ì—ëŠ” ""ì‚¬ìš©
 		
-		cout << c1 << " " << c2 << " " << int(c1) << " " << int(c2) << endl; // intÇüÀ¸·Î char¸¦ Ä³½ºÆÃ
+		cout << c1 << " " << c2 << " " << int(c1) << " " << int(c2) << endl; // intí˜•ìœ¼ë¡œ charë¥¼ ìºìŠ¤íŒ…
 
-		//c style Ä³½ºÆÃ
+		//c style ìºìŠ¤íŒ…
 		cout << (char)65 << endl;
 		cout << int'A' << endl;
 
-		//cpp style Ä³½ºÆÃ
+		//cpp style ìºìŠ¤íŒ…
 		cout << char(65) << endl;
 		cout << int('A') << endl;
 
-		//static Ä³½ºÆ®
+		//static ìºìŠ¤íŠ¸
 		cout << static_cast<char>(65) << endl;
 		cout << static_cast<int>('A') << endl;
 
@@ -41,50 +41,51 @@
 		cout << static_cast<int>(ch) << endl;
 		cout << ch << endl;
 
-		// char typeÀÇ ¹üÀ§
+		// char typeì˜ ë²”ìœ„
 		char c1(65);
 		cout << sizeof(char) << endl;
 		cout << (int)numeric_limits<char>::max() << endl;
 		cout << (int)numeric_limits<char>::lowest() << endl;	// 127
 
-		// unsigned char typeÀÇ ¹üÀ§
+		// unsigned char typeì˜ ë²”ìœ„
 		char c1(65);
 		cout << sizeof(unsigned char) << endl;
 		cout << (int)numeric_limits<char>::max() << endl;		// 257
-		cout << (int)numeric_limits<char>::lowest() << endl; // int·Î Ä³½ºÆÃÀ» ÇÏÁö ¾Ê´Â´Ù¸é??
+		cout << (int)numeric_limits<char>::lowest() << endl; // intë¡œ ìºìŠ¤íŒ…ì„ í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´??
 
 
-		//ÀÔ·Â¹Þ±â
+		//ìž…ë ¥ë°›ê¸°
 		cin >> c1;
 		cout << c1 << " " << static_cast<int>(c1) << endl;
-		//ÇÑ¹øÀÇ µÎ±ÛÀÚ¸¦ ¹Þ´Â´Ù¸é?
-		//buffer°¡ Á¸ÀçÇØ Ãâ·ÂµÇÁö ¾Ê´Â ±ÛÀÚµµ ÀúÀåÀÌ µÈ´Ù.
+		//í•œë²ˆì˜ ë‘ê¸€ìžë¥¼ ë°›ëŠ”ë‹¤ë©´?
+		//bufferê°€ ì¡´ìž¬í•´ ì¶œë ¥ë˜ì§€ ì•ŠëŠ” ê¸€ìžë„ ì €ìž¥ì´ ëœë‹¤.
 
 		//\n
-		cout << "This is first line \nsecond line"; // \nÀº ÇÏ³ªÀÇ ±ÛÀÚ·Î Ã³¸®µÈ´Ù.
-		cout << int('\n') << endl; // endl;°ú \nÀÇ Â÷ÀÌ´Â?
+		cout << "This is first line \nsecond line"; // \nì€ í•˜ë‚˜ì˜ ê¸€ìžë¡œ ì²˜ë¦¬ëœë‹¤.
+		cout << int('\n') << endl; // endl;ê³¼ \nì˜ ì°¨ì´ëŠ”?
 
 		//\t
 		//tab
 
-		//""¸¦ Ãâ·ÂÇÏ°í ½Í´Ù¸é?
-		//"¾Õ¿¡ \¸¦ ºÙÀÎ´Ù.
+		//""ë¥¼ ì¶œë ¥í•˜ê³  ì‹¶ë‹¤ë©´?
+		//"ì•žì— \ë¥¼ ë¶™ì¸ë‹¤.
 
 		//\a
-		//¼Ò¸® Ãâ·Â
+		//ì†Œë¦¬ ì¶œë ¥
 
-		//wchar_t Å¸ÀÔ
+		//wchar_t íƒ€ìž…
 		wchar_t c;
-		char32_t c3;	//À¯´ÏÄÚµåÀÇ ¹®ÀÚ ÀÚ·áÇü
+		char32_t c3;	//ìœ ë‹ˆì½”ë“œì˜ ë¬¸ìž ìžë£Œí˜•
 
 		return 0;
 
 	}
 <br>
-1. charÅ¸ÀÔÀÇ ÃÊ±âÈ­ ¹æ¹ý ¿ª½Ã ´Ù¸¥ ÀÚ·áÇüÀÇ ÃÊ±âÈ­ ¹æ¹ýÀÌ ÀüºÎ Àû¿ëµÊ
-2. cpp ¿¡¼­´Â std::stingÀ» ¸¹ÀÌ »ç¿ëÇÔ
-3. c, cpp styleÀº °­Á¦·Î º¯È¯ÇÏ´Â ´À³¦ÀÌ °­ÇÏ°í, static_cast´Â ÄÄÆÄÀÏ·¯¿¡°Ô È®ÀÎÈÄ º¯È¯ÇÑ´Ù´Â ´À³¦ÀÌ´Ù.
-4.  \n °ú endl;ÀÇ Â÷ÀÌÁ¡Àº \nÀº ±×Àú ÁÙ¹Ù²ÞÀÌ¶ó´Â ¹®ÀÚ¿¡ ºÒ°úÇÏ°í µÚ¿¡ ¿À´Â ±ÛÀÚ¸¦ ¹öÆÛ¿¡ ´ã¾Æ Ã³¸®ÇÔ.
-5. endl;ÀÇ °æ¿ì ¹öÆÛ¿¡ ´ã±ä°ÍÀ» ÀüºÎ Ãâ·ÂÇÏ°í ÁÙ¹Ù²ÞÀ» ÇÑ´Ù´Â¶æÀÌ´Ù.
-6. std::flush ´Â ÁÙ¹Ù²ÞÀ» ÇÏÁö¾Ê°í ¹öÆÛ¿¡ ÀÖ´Â °ÍÀ» ÀüºÎ Ãâ·ÂÇÏ¶ó´Â ¶æÀÌ´Ù.
-7. ¼÷Á¦ ASCIIÇ¥¿¡ µé¾î ÀÖ´Â ¿©·¯°¡Áö ¹®ÀÚµéÀ» cin / coutÀ¸·Î Ãâ·ÂÇØ º¾½Ã´Ù.
+
+1. charíƒ€ìž…ì˜ ì´ˆê¸°í™” ë°©ë²•ì€ ì—­ì‹œ ë‹¤ë¥¸ ìžë£Œí˜•ì˜ ì´ˆê¸°í™” ë°©ë²•ê³¼ ë™ì¼
+2. cppì—ì„œëŠ” std::stingì„ ë§Žì´ ì‚¬ìš©í•¨
+3. c, cpp style catsëŠ” ê°•ì œë¡œ ë³€í™˜í•˜ëŠ” ëŠë‚Œì´ ê°•í•˜ê³ , static_castëŠ” ì»´íŒŒì¼ëŸ¬ì—ê²Œ í™•ì¸í›„ ë³€í™˜í•œë‹¤ëŠ” ëŠë‚Œì´ë‹¤.
+4. \nì€ ê·¸ì € ì¤„ë°”ê¿ˆì´ë¼ëŠ” ë¬¸ìžì— ë¶ˆê³¼í•˜ë©° ë’¤ì— ì˜¤ëŠ” dataë¥¼ ë²„í¼ì— ë‹´ì•„ ì²˜ë¦¬í•¨.
+5. endl;ì˜ ê²½ìš° ë²„í¼ì— ë‹´ê¸´ê²ƒì„ ì „ë¶€ ì¶œë ¥í•˜ê³  ì¤„ë°”ê¿ˆì„ í•œë‹¤ëŠ”ëœ»ì´ë‹¤.
+6. std::flushëŠ” ì¤„ë°”ê¿ˆì„ í•˜ì§€ì•Šê³  ë²„í¼ì— ìžˆëŠ” ê²ƒì„ ì „ë¶€ ì¶œë ¥í•˜ë¼ëŠ” ëœ»ì´ë‹¤.
+7. ìˆ™ì œ ASCIIí‘œì— ë“¤ì–´ ìžˆëŠ” ì—¬ëŸ¬ê°€ì§€ ë¬¸ìžë“¤ì„ cin / coutìœ¼ë¡œ ì¶œë ¥í•´ ë´…ì‹œë‹¤.
