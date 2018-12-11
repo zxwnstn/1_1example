@@ -13,6 +13,7 @@
 	using name space std;
 
 	int main()
+	
 	{
 	
 		int x = 4 + 2 * 3;		// 10?
