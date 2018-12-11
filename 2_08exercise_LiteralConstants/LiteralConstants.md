@@ -1,65 +1,75 @@
-## 2-8°­ ¸®ÅÍ·² »ó¼ö
+## 2-8ê°• ë¦¬í„°ëŸ´ ìƒìˆ˜
 
 <br>
 
-###Literal°ú Ä³½ºÆÃ
-º¯¼ö¾È¿¡ ÀúÀåµÇ´Â Á¤º¸, »ó¼ö¸¦ literalÀÌ¶ó°í ÇÑ´Ù.
+### Literalê³¼ ìºìŠ¤íŒ…
+
+ë³€ìˆ˜ì•ˆì— ì €ìž¥ë˜ëŠ” ì •ë³´, ìƒìˆ˜ë¥¼ literalì´ë¼ê³  í•œë‹¤.
 
 	#include<iostream>
 	int main()
 	{
 		using namespace std;
 
-		float pi = 3.14f;	// f°¡ ¾øÀ¸¸é double·Î Ä³½ºÆÃÀÎµÈ´Ù. f¿Ö¿¡µµ l(long double)ÀÌ ÀÖµû.
-		int i = -12345u;	//  u°¡ ºÙÀ¸¸é unsigned·Î Ä³½ºÆÃ µÈ´Ù.
-							// intÀÇ °æ¿ì u ¿Ü¿¡ uL , UL, LL µîÀÌ ÀÖ´Ù.
-							// ´ëºÎºÐÀÇ °æ¿ì ºÎµ¿¼Ò¼öÁ¡ ¼öÀÇ f³ª l, intÀÇ u¸¦ ³Ö´Â °æ¿ì°¡ ´ëºÎºÐÀÌ´Ù.
-							// ±×·¯³ª ÀÌ·¸°Ô Ç¥ÇöÇÏ´Â°Í º¸´Ù´Â, Ä³½ºÆÃÀ¸·Î ¸íÈ®ÇÏ°Ô º¸¿©ÁÖ´Â°ÍÀÌ ÁÁ´Ù.
+		float pi = 3.14f;	// fê°€ ì—†ìœ¼ë©´ doubleë¡œ ìºìŠ¤íŒ…ì¸ëœë‹¤. fì™œì—ë„ l(long double)ì´ ìžˆë”°.
+		int i = -12345u;	//  uê°€ ë¶™ìœ¼ë©´ unsignedë¡œ ìºìŠ¤íŒ… ëœë‹¤.
+					// intì˜ ê²½ìš° u ì™¸ì— uL , UL, LL ë“±ì´ ìžˆë‹¤.
+					// ëŒ€ë¶€ë¶„ì˜ ê²½ìš° ë¶€ë™ì†Œìˆ˜ì  ìˆ˜ì˜ fë‚˜ l, intì˜ uë¥¼ ë„£ëŠ” ê²½ìš°ê°€ ëŒ€ë¶€ë¶„ì´ë‹¤.
+					// ê·¸ëŸ¬ë‚˜ ì´ë ‡ê²Œ í‘œí˜„í•˜ëŠ”ê²ƒ ë³´ë‹¤ëŠ”, ìºìŠ¤íŒ…ìœ¼ë¡œ ëª…í™•í•˜ê²Œ ë³´ì—¬ì£¼ëŠ”ê²ƒì´ ì¢‹ë‹¤.
 		
 		return 0;
 	}
 
 <br>
 
-### 8Áø¼ö¿Í 16Áø¼ö
-Decimal	: 0 1 2 3 4 5 6 7 8 9 10
-Octal	: 0 1 2 3 4 5 6 7 8 10
-Hexa	: 0 1 2 3 4 5 6 7 8 9 A B C D E F 10
-1. ¼ýÀÚ¾Õ¿¡ 0À» ºÙÀÌ¸é 8Áø¼ö°¡ µÈ´Ù. 
-2. 0x¸¦ ºÙÀÌ¸é 16Áø¼ö°¡ µÈ´Ù.
-3. 16Áø¼ö¸¦ »ç¿ëÇÏ´Â °æ¿ì°¡ ²Ï ¸¹´Ù.
-4. 0b¸¦ ºÙÀÌ¸é 2Áø¼ö°¡ µÈ´Ù.
+
+1. ìˆ«ìžì•žì— 0ì„ ë¶™ì´ë©´ 8ì§„ìˆ˜ê°€ ëœë‹¤. 
+2. 0xë¥¼ ë¶™ì´ë©´ 16ì§„ìˆ˜ê°€ ëœë‹¤.
+3. 16ì§„ìˆ˜ë¥¼ ì‚¬ìš©í•˜ëŠ” ê²½ìš°ê°€ ê½¤ ë§Žë‹¤.
+4. 0bë¥¼ ë¶™ì´ë©´ 2ì§„ìˆ˜ê°€ ëœë‹¤.
+### 8ì§„ìˆ˜ì™€ 16ì§„ìˆ˜
+	Decimal: 0 1 2 3 4 5 6 7 8 9 10
+	Octal   : 0 1 2 3 4 5 6 7 8 10
+	Hexa    : 0 1 2 3 4 5 6 7 8 9 A B C D E F 10
+
+
+1. ìˆ«ìžì•žì— 0ì„ ë¶™ì´ë©´ 8ì§„ìˆ˜ê°€ ëœë‹¤. 
+2. 0xë¥¼ ë¶™ì´ë©´ 16ì§„ìˆ˜ê°€ ëœë‹¤.
+3. 16ì§„ìˆ˜ë¥¼ ì‚¬ìš©í•˜ëŠ” ê²½ìš°ê°€ ê½¤ ë§Žë‹¤.
+4. 0bë¥¼ ë¶™ì´ë©´ 2ì§„ìˆ˜ê°€ ëœë‹¤.	
+
+<br>
 
 	#include<iostream>
 	int main()
 	{
 		using namespace std;
 
-		int x = 012;	// 8Áø¼ö Ç¥±â 11
-		int y = 0xF		// 16Áø¼ö Ç¥±â 15
-		cout << x << y << endl; // Ãâ·ÂÀº ±âº»ÀûÀ¸·Î 10Áø¼ö·Î µÈ´Ù.
-		x = 1011'1111'1010; ¼ýÀÚ»çÀÌ¿¡ '¸¦ ³Ö¾îµµ ÄÄÆÄÀÏ·¯°¡ ¹«½ÃÇÑ´Ù.
+		int x = 012;		// 8ì§„ìˆ˜ í‘œê¸° 11
+		int y = 0xF		// 16ì§„ìˆ˜ í‘œê¸° 15
+		cout << x << y << endl; // ì¶œë ¥ì€ ê¸°ë³¸ì ìœ¼ë¡œ 10ì§„ìˆ˜ë¡œ ëœë‹¤.
+		x = 1011'1111'1010; 	//ìˆ«ìžì‚¬ì´ì— 'ë¥¼ ë„£ì–´ë„ ì»´íŒŒì¼ëŸ¬ê°€ ë¬´ì‹œí•œë‹¤.
 	
 		return 0;
 	}
 
 <br>
 
-### ½Éº¼¸¯ »ó¼ö	
+### ì‹¬ë³¼ë¦­ ìƒìˆ˜	
 	#include<iostream>
 	int main()
 	{
 		using namespace std;
 
-		//º¯¼ö³»¿¡¼­ ¹Ýº¹µÇ´Â ¼ýÀÚÀÇ »ç¿ë
+		//ë³€ìˆ˜ë‚´ì—ì„œ ë°˜ë³µë˜ëŠ” ìˆ«ìžì˜ ì‚¬ìš©
 
-		//1. ¸ÅÁ÷³Ñ¹ö ÀÌ¿ë
+		//1. ë§¤ì§ë„˜ë²„ ì´ìš©
 		int items = 123
-		int price = num_items * 10 // ¿©±â¼­ 10À» ¸ÅÁ÷³Ñ¹ö¶ó°í ºÎ¸¥´Ù.
-								   // ÀÏ¹ÝÀûÀ¸·Î Àß »ç¿ëÇÏÁö ¾Ê´Â´Ù(ÁÁÁö¾Ê´Ù).
+		int price = num_items * 10 	// ì—¬ê¸°ì„œ 10ì„ ë§¤ì§ë„˜ë²„ë¼ê³  ë¶€ë¥¸ë‹¤.
+						// ì¼ë°˜ì ìœ¼ë¡œ ìž˜ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ë‹¤(ì¢‹ì§€ì•Šë‹¤).
 
-		//2. ½Éº¼¸¯ »ó¼öÀÇ ÀÌ¿ë
-		const int price_per_item = 10; // const°¡ ºÙ¾î 10ÀÌ¶ó´Â literalÀº Àý´ë º¯ÇÒ ¼ö ¾ø´Ù.
+		//2. ì‹¬ë³¼ë¦­ ìƒìˆ˜ì˜ ì´ìš©
+		const int price_per_item = 10;  // constê°€ ë¶™ì–´ 10ì´ë¼ëŠ” literalì€ ì ˆëŒ€ ë³€í•  ìˆ˜ ì—†ë‹¤.
 		int num_items = 123;
 		int price = num_items * price_per_item;
 
