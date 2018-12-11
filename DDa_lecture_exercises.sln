@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_08exercise_LiteralConstan
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_09exercise_SymbolicConstants", "2_09exercise_SymbolicConstants\2_09exercise_SymbolicConstants.vcxproj", "{1C366C08-6619-4017-853A-618F40AD7737}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3_01exercise_ORprecedence_associativity", "3_01exercise_ORprecedence_association\3_01exercise_ORprecedence_association.vcxproj", "{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -261,6 +263,14 @@ Global
 		{1C366C08-6619-4017-853A-618F40AD7737}.Release|x64.Build.0 = Release|x64
 		{1C366C08-6619-4017-853A-618F40AD7737}.Release|x86.ActiveCfg = Release|Win32
 		{1C366C08-6619-4017-853A-618F40AD7737}.Release|x86.Build.0 = Release|Win32
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Debug|x64.ActiveCfg = Debug|x64
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Debug|x64.Build.0 = Debug|x64
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Debug|x86.ActiveCfg = Debug|Win32
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Debug|x86.Build.0 = Debug|Win32
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Release|x64.ActiveCfg = Release|x64
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Release|x64.Build.0 = Release|x64
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Release|x86.ActiveCfg = Release|Win32
+		{1DFD3ADD-E0BA-4E94-BBF8-EBAA3B5C58D3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
