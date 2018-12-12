@@ -1,10 +1,10 @@
-## Á¶°ÇºÎ ¿¬»êÀÚ
+## ì¡°ê±´ë¶€ ì—°ì‚°ìž
 
 <br>
 
 ### sizeof
 
-¾î¶² µ¥ÀÌÅÍÇüÀÇ Å©±â ¾Ë±â
+ì–´ë–¤ ë°ì´í„°í˜•ì˜ í¬ê¸°
 
 	include<iostream>
 
@@ -12,15 +12,15 @@
 	{
 		using namespace std;
 		float a;
-		sizeof(float);	// µ¥ÀÌÅÍ Å¸ÀÔÀ» ³Ö¾îµµ µÈ´Ù. Å¬·¡½ºµµ »ç¿ë°¡´É
+		sizeof(float);		// ë°ì´í„° íƒ€ìž…ì„ ë„£ì–´ë„ ëœë‹¤. í´ëž˜ìŠ¤ë„ ì‚¬ìš©ê°€ëŠ¥
 		sizeof(a);		// 4byte , 32bit
 
 		return 0;
 	}
 
-sizeof ´Â ÇÔ¼öÀÏ±î?
-1. sizeof´Â Operator´Ù! Ç¥ÁØ¿¡¼­ ±×·¸°Ô Á¤ÇÔ
-2. º¯¼ö¸íÀ» ¾µ¶§´Â ()¸¦ ¾È½áµµ µÈ´Ù.
+sizeof ëŠ” í•¨ìˆ˜ì¼ê¹Œ??
+1. sizeofëŠ” Operatorë‹¤! í‘œì¤€ì—ì„œ ê·¸ë ‡ê²Œ ì •í•¨
+2. ë³€ìˆ˜ëª…ì„ ì“¸ë•ŒëŠ” ()ë¥¼ ì•ˆì¨ë„ ëœë‹¤.
 
 <br>
 
@@ -34,15 +34,15 @@ sizeof ´Â ÇÔ¼öÀÏ±î?
 		
 		int x = 3;
 		int y = 10;
-		int z = (++x, ++z);		// ¾Õ¿¡°Í °è»êÈÄ µÚ¿¡°ÍÀÌ º¯¼ö¿¡ ´ëÀÔ
-								// ¹Ýº¹¹® ¾È¿¡¼­´Â ¸¹ÀÌ »ç¿ëÇÑ´Ù.
+		int z = (++x, ++z);		// ì•žì—ê²ƒ ê³„ì‚°í›„ ë’¤ì—ê²ƒì´ ë³€ìˆ˜ì— ëŒ€ìž…
+						// ë°˜ë³µë¬¸ ì—ì„œ ë§Žì´ ì‚¬ìš©í•œë‹¤.
 
-		int a = 1 , b = 10;		// ¿©±â¼­ , ´Â ´Ü¼ø ±¸ºÐ±âÈ£·Î ÀÌ¿ëµÇ´Â°Í
+		int a = 1 , b = 10;		// ì—¬ê¸°ì„œ , ëŠ” ë‹¨ìˆœ êµ¬ë¶„ê¸°í˜¸ë¡œ ì—°ì‚¬ìž , ì™€ ë‹¤ë¥´ë‹¤
 		int z;
 
-		z = a, b ;				// 10À» ±â´ë 
+		z = a, b ;			// 10ì„ ê¸°ëŒ€ 
 		cout << z << endl;		// 1??
-								// = ¿¬»êÀÚ°¡ , ¿¬»êÀÚ º¸´Ù ¿ì¼±¼øÀ§°¡ ³ô±â ¶§¹®!
+						// = ì—°ì‚°ìžê°€ , ì—°ì‚°ìž ë³´ë‹¤ ìš°ì„ ìˆœìœ„ê°€ ë†’ê¸° ë•Œë¬¸!
 		z = ( a++ , a + b);
 		cout << z << endl;		//
 
@@ -50,13 +50,13 @@ sizeof ´Â ÇÔ¼öÀÏ±î?
 		return 0;
 	}
 
-»ç¿ë»ó¿¡ ÀÖ¾î ÁÖÀÇ ÇØ¾ßµÉÁ¡µéÀÌ ÀÖ´Ù. °æ¿ì¿¡ µû¶ó¼± ±×³É Ç®¾î¾²´Â°Ô ´õ ÁÁÀ»¼öµµ ÀÖ´Ù.
+ì‚¬ìš©ìƒì— ìžˆì–´ ì£¼ì˜ í•´ì•¼ë ì ë“¤ì´ ìžˆë‹¤. ê²½ìš°ì— ë”°ë¼ì„  ê·¸ëƒ¥ í’€ì–´ì“°ëŠ”ê²Œ ë” ì¢‹ì„ìˆ˜ë„ ìžˆë‹¤.
 
 <br>
 
 ### conditional operator (arithmetic if)
 
-c¾î cpp¿¡¼­´Â 3Ç×¿¬»êÀÚ°¡ ÀÖ´Ù.
+cì–´ cppì—ì„œëŠ” ìœ ì¼í•˜ê²Œ3í•­ì—°ì‚°ìžë§Œì´ ìžˆë‹¤.
 
 	include<iostream>
 
@@ -65,8 +65,7 @@ c¾î cpp¿¡¼­´Â 3Ç×¿¬»êÀÚ°¡ ÀÖ´Ù.
 		using namespace std;
 
 		bool onsale = true;
-
-		inf price;
+		int price;
 
 		if (onsale)
 			price 10;
@@ -74,16 +73,18 @@ c¾î cpp¿¡¼­´Â 3Ç×¿¬»êÀÚ°¡ ÀÖ´Ù.
 			price 100;		
 
 		cout << price << endl;
-		// ÀÌ¶§ price¸¦ const·Î ¾²°í ½Í´Ù¸é??
-		const int price (onsale == true) ? 10 : 100 ;
-		// ÀÌ·²¶§ 3Ç× ¿¬»êÀÚ°¡ ¾ÆÁÖ À¯¿ëÇÏ°Ô ¾²ÀÏ¼ö ÀÖ´Ù.
-		// if¹® À¸·Î´Â price¸¦ const ÁöÁ¤ÇÒ¼ö ¾ø±â ¶§¹®ÀÌ´Ù.
-
+		
+		// ì´ë•Œ priceë¥¼ constë¡œ ì“°ê³  ì‹¶ë‹¤ë©´??
+		// ifë¬¸ ìœ¼ë¡œëŠ” priceë¥¼ const ì§€ì •í• ìˆ˜ ì—†ë‹¤.
+		// ì´ëŸ´ë•Œ 3í•­ ì—°ì‚°ìžê°€ ì•„ì£¼ ìœ ìš©í•˜ê²Œ ì“°ì¼ìˆ˜ ìžˆë‹¤.
+		
+		const int price = (onsale == true) ? 10 : 100 ;
+		
 		return 0;
 	}
-Á¶°ÇÀÌ º¹ÀâÇÏ°Å³ª °ªÀÌ º¹ÀâÇÏ´Ù¸é ¾²Áö ¾Ê´Â°Ô ÁÁ´Ù.
+ì¡°ê±´ì´ ë³µìž¡í•˜ê±°ë‚˜ ê°’ì´ ë³µìž¡í•˜ë‹¤ë©´ ì“°ì§€ ì•ŠëŠ”ê²Œ ì¢‹ë‹¤.
 
->¼÷Á¦
+>ìˆ™ì œ
 
 	int main()
 	{
@@ -91,4 +92,4 @@ c¾î cpp¿¡¼­´Â 3Ç×¿¬»êÀÚ°¡ ÀÖ´Ù.
 	cout << ( x % 2 == 0 ) ? "even" : "odd" << endl;
 	return0;
 	}
-ÀÇ ÄÚµå°¡ ¿À·ù°¡ ³ª´Â ÀÌÀ¯¿Í ÇØ°á¹æ¹ýÀ» ¾Ë¾Æº¸ÀÚ!
+ìœ„ ì½”ë“œê°€ ì˜¤ë¥˜ ë‚˜ëŠ” ì´ìœ ì™€ í•´ê²°ë°©ë²•ì„ ì•Œì•„ë³´ìž!
