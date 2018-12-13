@@ -12,6 +12,8 @@ bit 단위 끼리 연산하는 연산자다.
 4. 비트연산은 unsigned자료형만 사용한다.
 5. 비트연산을 하기위해 bitset헤더를 추가해준다.
 6. std::bitset<x>(y)에서 x는 2진수의 자리수고 y는 변수다.
+ 
+<br>
 
 ### bitwise letf shift <<
 
