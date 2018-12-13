@@ -68,7 +68,7 @@
 		cout << "item3 obtained " << bitset<8>(items_flag) << endl; //item3을 얻었으므로 item_flag는 0000 0101이다.
 		// item3 los 아이템의 실
 		items_falg &= ~opt3					    //무엇을 의미하는지 잘 생각해보자!!
-		cout << "item3 lost " << bitset<8>(items_flag) << endl;	    //item3을 다시 잃었으므로 item_flag는 0000 0001이다.
+		cout << "item3 lost " << bitset<8>(items_flag) << endl;	    //item3을 다시 잃었으므로 item_flag는 0000 0001.
 
 
 
