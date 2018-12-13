@@ -57,18 +57,18 @@
 		
 		//초창기 내 아이템 플래그(공백의 인벤토리)
 		unsigend char items_flag = 0;					
-		cout << "no item " << bitset<8>(items_flag) << endl;        //no item 상태이므로 item_flag는 0000 0000이다. 
+		cout << "no item " << bitset<8>(items_flag) << endl;        //no item 상태이므로 item_flag는 0000 0000 
 
 
 		// item0 get! 아이템의 득
 		items_flag |= opt0					    //items_flag = items_flag | opt0; 와 같은 의미 
-		cout << "item0 obtained " << bitset<8>(items_flag) << endl; //item0을 얻었으므로 item_flag는 0000 0001이다.
+		cout << "item0 obtained " << bitset<8>(items_flag) << endl; //item0을 얻었으므로 item_flag는 0000 0001
 		// item3 get!
 		items_flag |= opt3
-		cout << "item3 obtained " << bitset<8>(items_flag) << endl; //item3을 얻었으므로 item_flag는 0000 0101이다.
+		cout << "item3 obtained " << bitset<8>(items_flag) << endl; //item3을 얻었으므로 item_flag는 0000 0101
 		// item3 los 아이템의 실
 		items_falg &= ~opt3					    //무엇을 의미하는지 잘 생각해보자!!
-		cout << "item3 lost " << bitset<8>(items_flag) << endl;	    //item3을 다시 잃었으므로 item_flag는 0000 0001.
+		cout << "item3 lost " << bitset<8>(items_flag) << endl;	    //item3을 다시 잃었으므로 item_flag는 0000 0001
 
 
 
@@ -86,7 +86,7 @@
 		
 
 		// 동시에 여러개의 아이템을 얻을때
-		items_falg |= (opt2 | opt3);				// 의미하는 바를 차근히 생각해보자!
+		items_falg |= (opt2 | opt3);				// 의미하는 바를 차분히 생각해보자!
 		cout << bitset<8>(opt2 | opt3) << endl;
 		cout << "item2, 3 obtained" << bitset<8>(items_flag) <<endl;
 
@@ -94,10 +94,10 @@
 		//아이템2를 갖고있고, 아이템1을 갖고있지 않을경우			
 		if ((items_flag & opt2) && !(items_flag & opt1))	// 무엇을 의미하는지 생각해보자! &&는 진리연산자
 		{
-			items_flag ^= opt2;				// ^ 연산자와 이 코드가 의미하는 바를 잘 생각해보자!
+			items_flag ^= opt2;				// ^ 연산자와 코드가 의미하는 바를 잘 생각해보자!
 			items_flag ^= opt1;			        // 0000 1101 ^ 0000 0100
 			//숙제 한줄로 바꿔보기!				 // 0000 1101 ^ 0000 0010
-			itmes_flag ^= (opt2 | opt1);
+			답 : itmes_flag ^= (opt2 | opt1);
 
 			cout << bitset<8>(items_flag) << endl		// 아이템2를 없애고, 아이템 1을 있게 한다!
 									// 따라서 items flag는 1011
@@ -137,25 +137,27 @@
 		unsigned char green = pixel_color & green_mask;
 		cout << "green " << bitset<8>(green) << " " << int(green) << endl;		
 		/*위코드는 왜 원하는 대로 되지 않을까?
-		이유는 char형은 1바이트기 때문에 진수8자리수 이상을 받지 못한다.*/
+		->이유는 char형은 1바이트기 때문에 8자리수 이상의 수를 처리할수 없기 때문이다.*/
 		
 		//그렇다면
 		unsigned int green = pixel_color & green_mask; 
 		cout << "green " << bitset<16>(green) << " " << int(green) << endl;
 		//라고 수정하면 원하는 결과가 제대로 나올까??
 		//아니다, 좀더 가깝긴 하지만 10101010 00000000 이런식으로 나오게 될것이다. 
-		//이를 해결하기 위해 >> 연산자를 넣어줘야 한다.
+		//이를 해결하기 위해 >>(right shift) 연산자를 넣어줘야 한다.
 
-		cout << "green " << bitset<8>(green >> 8) << " " << int(green) << endl;
+		cout << "green " << bitset<8>(green >> 8) << " " << (green >> 8) << endl;
 
-		숙제 red 해보기!
+		//숙제 red 해보기!
+		unsigned int red = pixel_color & red_mask;
+		cout << "red " << bitset<8>(red >> 24) << (red >> 16) << endl;
 		
 		return 0;
 	}
 
 <br>
 
-### 비트플래그 실용예제
+### 비트플래그 실용적 예
 
 	#include <iostream>
 	#include <bitset>
