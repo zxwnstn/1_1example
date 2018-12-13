@@ -72,10 +72,10 @@
 
 
 
-		// has item1?? 아이템의 소지 여부 판단				// 아이템1 을 소지 하고 있는가??
+		// has item1?? 아이템의 소지 여부 판단			// 아이템1 을 소지 하고 있는가??
 		if (items_flag & opt1)										
-			cout << "has item1" << endl;				// 0000 0001 & 0000 0010 이 참이라면
-		else								// 이것이 무엇을 의미하는지 잘 생각해 보자!
+			cout << "has item1" << endl;			// 0000 0001 & 0000 0010 이 참이라면
+		else							// 이것이 무엇을 의미하는지 잘 생각해 보자!
 			cout << "Not have item1" << endl;						
 		// has item0??
 		if (items_flag & opt1)
@@ -86,7 +86,7 @@
 		
 
 		// 동시에 여러개의 아이템을 얻을때
-		items_falg |= (opt2 | opt3);				// 2, 3 아이템을 | 연산 하고, 다시 내 items_flag에 | 시킨다!
+		items_falg |= (opt2 | opt3);				// 2, 3 아이템을 | 연산 하고, items_flag에 다시 | 연산한다!
 		cout << bitset<8>(opt2 | opt3) << endl;
 		cout << "item2, 3 obtained" << bitset<8>(items_flag) <<endl;
 
@@ -109,9 +109,9 @@
 
 ### 비트 마스크 : color table의 예
 
-16진수 3개의 조합으로 표현한다. #RRGGBB 순서로 레드, 그린, 블루 
-16^1*15 + 16^0*15 = 255 
-각각의 스팩트럼이 0부터 255 즉 256가지임, 그런데 이는 2^8이고(애초에 16이 2의 4승이다.) 2진수와 호환이 용이하다.
+1. 16진수 3개의 조합으로 표현한다. #RRGGBB 순서로 레드, 그린, 블루 
+2. 16^1*15 + 16^0*15 = 255 
+3. 각 색의 스팩트럼이 0부터 255 즉 256가지임, 그런데 이는 2^8이고(애초에 16이 2의 4승이다.) 2진수와 호환이 용이하다.
 
 	#include<iostream>
 	#include<bitset>
@@ -134,13 +134,15 @@
 		
 		unsigned char green = pixel_color & green_mask;
 		cout << "green " << bitset<8>(green) << " " << int(green) << endl;		
-		//위코드는 왜 원하는 대로 되지 않을까?
-		//이유는 char형은 1바이트기 때문에 진수8자리수 이상을 받지 못한다.
+		/*위코드는 왜 원하는 대로 되지 않을까?
+		이유는 char형은 1바이트기 때문에 진수8자리수 이상을 받지 못한다.*/
+		
 		//그렇다면
 		unsigned int green = pixel_color & green_mask; 
 		cout << "green " << bitset<16>(green) << " " << int(green) << endl;
 		//라고 수정하면 원하는 결과가 제대로 나올까??
-		//아니다 10101010 00000000 이런식으로 나오게 될것이다. 따라서 >> 연산자를 넣어줘야 한다.
+		//아니다, 좀더 가깝긴 하지만 10101010 00000000 이런식으로 나오게 될것이다. 
+		//이를 해결하기 위해 >> 연산자를 넣어줘야 한다.
 
 		cout << "green " << bitset<8>(green >> 8) << " " << int(green) << endl;
 
