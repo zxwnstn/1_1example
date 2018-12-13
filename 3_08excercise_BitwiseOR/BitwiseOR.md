@@ -104,7 +104,7 @@ bit 단위 끼리 연산하는 연산자다.
             
         cout << std::bitset<4>(a & b) << endl;      // 0100 두개다 true여야 true
         cout << std::bitset<4>(a | b) << endl;      // 1110 두개다 false여야 false
-        cout << std::bitset<4>(a ^ b) << endl;      // 1010 두개가 같으면 false 다르면 true
+        cout << std::bitset<4>(a ^ b) << endl;      // 1010 두개가 다르면 false 같면 true
 <br>
         
 ### bitwise 연산자 활용
