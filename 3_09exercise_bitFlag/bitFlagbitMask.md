@@ -1,4 +1,4 @@
-## 3-9강 비트마스크, 비트플래그
+## 3-9강 비트마스크와 비트플래그
 
 <br>
 
@@ -50,25 +50,25 @@
 		const usigned char opt3 = 1 << 3;
 		// opt 4, 5, 6, 7...
 
-		cout << bitset<8>(opt0) << endl;				// 0000 0001
-		cout << bitset<8>(opt1) << endl;				// 0000 0010
-		cout << bitset<8>(opt2) << endl;				// 0000 0100
-		cout << bitset<8>(opt3) << endl;				// 0000 1000
+		cout << bitset<8>(opt0) << endl;			    // 0000 0001
+		cout << bitset<8>(opt1) << endl;			    // 0000 0010
+		cout << bitset<8>(opt2) << endl;			    // 0000 0100
+		cout << bitset<8>(opt3) << endl;			    // 0000 1000
 		
 		//초창기 내 아이템 플래그(공백의 인벤토리)
 		unsigend char items_flag = 0;					
-		cout << "no item " << bitset<8>(items_flag) << endl;		//no item 상태이므로 item_flag는 0000 0000이다. 
+		cout << "no item " << bitset<8>(items_flag) << endl;        //no item 상태이므로 item_flag는 0000 0000이다. 
 
 
 		// item0 get! 아이템의 득
-		items_flag |= opt0						//items_flag = items_flag | opt0; 와 같은 의미 
-		cout << "item0 obtained " << bitset<8>(items_flag) << endl;	//item0을 얻었으므로 item_flag는 0000 0001이다.
+		items_flag |= opt0					    //items_flag = items_flag | opt0; 와 같은 의미 
+		cout << "item0 obtained " << bitset<8>(items_flag) << endl; //item0을 얻었으므로 item_flag는 0000 0001이다.
 		// item3 get!
 		items_flag |= opt3
-		cout << "item3 obtained " << bitset<8>(items_flag) << endl;	//item3을 얻었으므로 item_flag는 0000 0101이다.
+		cout << "item3 obtained " << bitset<8>(items_flag) << endl; //item3을 얻었으므로 item_flag는 0000 0101이다.
 		// item3 los 아이템의 실
-		items_falg &= ~opt3						//무엇을 의미하는지 잘 생각해보자!!
-		cout << "item3 lost " << bitset<8>(items_flag) << endl;		//item3을 다시 잃었으므로 item_flag는 0000 0001이다.
+		items_falg &= ~opt3					    //무엇을 의미하는지 잘 생각해보자!!
+		cout << "item3 lost " << bitset<8>(items_flag) << endl;	    //item3을 다시 잃었으므로 item_flag는 0000 0001이다.
 
 
 
@@ -86,7 +86,7 @@
 		
 
 		// 동시에 여러개의 아이템을 얻을때
-		items_falg |= (opt2 | opt3);				// 2, 3 아이템을 | 연산 하고, items_flag에 다시 | 연산한다!
+		items_falg |= (opt2 | opt3);				// 의미하는 바를 차근히 생각해보자!
 		cout << bitset<8>(opt2 | opt3) << endl;
 		cout << "item2, 3 obtained" << bitset<8>(items_flag) <<endl;
 
