@@ -1,31 +1,49 @@
-## 4-04 AutoÅ°¿öµå¿Í ÀÚ·áÇü Ãß·Ğ
+## 4-04 Autoí‚¤ì›Œë“œì™€ ìë£Œí˜• ì¶”ë¡ 
 
 <br>
 
-### autoÀÇ ¿ë·Ê
+### autoì˜ ìš©ë¡€
 
 	#include<iostream>
 	using namespace std;
 
-	int Add(int a, int b)	// ½ÉÁö¾î ÇÔ¼öÀÇ ¸®ÅÏ ÀÚ·áÇü¿¡µµ auto »ç¿ë°¡´É
-	auto Add (int a, int b)	// parameter´Â auto·Î ¾ÈµÊ
-	{						// templeteÀº »ç¿ë°¡´É - ¾²±â ¾î·Á¿ò
-		return a+b;
-	}
-	//Æ®·¹ÀÏ¸µ ¸®ÅÏÅ¸ÀÔ
-	auto add_1(int x, int y) -> int;
-	auto add_2(int x, int y) -> doube;	//Á÷°üÀûÀ¸·Î ÀĞ±â ÆíÇØÁü
-
 	int main()
 	{
-	int a = 123;		// a´Â 123ÀÌ¹Ç·Î intergerÇüÀÏ °ÍÀÌ »·ÇÔ, ÄÄÆÄÀÏ·¯°¡ Ãß·ĞÇÒ¼ö ÀÖÀ½
-	auto a = 123;		// autoÀÚ·áÇü À¸·Î ±³Ã¼°¡´É
-						// ÃÊ±âÈ­ ÇÏÁö¾ÊÀ¸¸é autoÀÚ·áÇüÀ» ¾µ¼ö¾ø´Ù.(´ç¿¬)
+	int a = 123;		// aëŠ” 123ì´ë¯€ë¡œ intergerí˜•ì¼ ê²ƒì´ ë»”í•¨, ì»´íŒŒì¼ëŸ¬ê°€ ì¶”ë¡ í• ìˆ˜ ìˆìŒ
+	auto a = 123;		// autoìë£Œí˜• ìœ¼ë¡œ êµì²´ê°€ëŠ¥
+				// ë‹¨, ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™” í•˜ì§€ì•Šìœ¼ë©´ autoìë£Œí˜•ì„ ì“¸ìˆ˜ì—†ë‹¤.(ë‹¹ì—°)
 	
-	auto a = 123;		// Á¤¼öÇü ÀÚ·áÇü
-	auto b = 123.0;		// ½Ç¼öÇü ÀÚ·áÇü
-	auto c = a + b;		// ½Ç¼öÇü ÀÚ·áÇüÀÌ µÊ
-	auto d = add(1, 2)	// ÇÔ¼öÀÇ ¸®ÅÏ°ªµµ autoÇü ÁöÁ¤°¡´ÉÇÔ 
-	
+	auto a = 123;		// ì •ìˆ˜í˜• ìë£Œí˜•
+	auto b = 123.0;		// ì‹¤ìˆ˜í˜• ìë£Œí˜•
+	auto c = a + b;		// ì‹¤ìˆ˜í˜• ìë£Œí˜•ì´ ë¨
+	 	
 	return 0;
 	}
+<br>
+
+### í•¨ìˆ˜ì˜ auto ì´ìš©
+
+	#include<iostream>
+	using namespace std;
+
+	int Add(int a, int b)		// í•¨ìˆ˜ì˜ ë¦¬í„´ ìë£Œí˜•ì—ë„ auto ì‚¬ìš©ê°€ëŠ¥
+	auto Add(int a, int b)		// parameterëŠ” autoë¡œ ì•ˆë¨
+	{				// templeteì€ ì‚¬ìš©ê°€ëŠ¥ - ì“°ê¸° ì–´ë ¤ì›€
+		return a+b;
+	}
+	
+	int main()
+	{
+		auto d = add(1, 2)	// í•¨ìˆ˜ì˜ ë¦¬í„´ê°’ë„ autoí˜• ì§€ì •ê°€ëŠ¥í•¨
+		return 0;
+	}	
+		
+<br>
+
+### íŠ¸ë ˆì¼ë§ ë¦¬í„´íƒ€ì…
+
+	
+	auto add_1(int x, int y) -> int;
+	auto add_2(int x, int y) -> doube;	//ì§ê´€ì ìœ¼ë¡œ ì½ê¸° í¸í•´ì§
+	
+	
