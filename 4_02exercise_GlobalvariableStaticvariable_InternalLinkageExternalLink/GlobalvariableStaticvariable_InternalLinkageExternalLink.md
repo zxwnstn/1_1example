@@ -157,8 +157,6 @@ cpp파일 하나 추가해서 코딩해보자
 
 ### header의 이용시 주의점
 
-전역 상수는 괜찮을까?
-
 	/* MyConstants.header */
 	#pragma once
 
