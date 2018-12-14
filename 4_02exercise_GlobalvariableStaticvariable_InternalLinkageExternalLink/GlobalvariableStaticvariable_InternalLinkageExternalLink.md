@@ -1,12 +1,12 @@
-## Àü¿ªº¯¼ö, Á¤Àûº¯¼ö, ³»ºÎ¿¬°á, ¿ÜºÎ¿¬°á
+## ì „ì—­ë³€ìˆ˜, ì •ì ë³€ìˆ˜, ë‚´ë¶€ì—°ê²°, ì™¸ë¶€ì—°ê²°
 
-Àü¿ªº¯¼ö´Â °¡±ÞÀû »ç¿ëÇÏÁö ¾Ê¾Æ¾ß ÇÏ°í
-·ÎÄÃº¯¼ö´Â Àû±Ø ÀÌ¿ëÇÏ¿©¾ß ÇÑ´Ù.
-ÇÏÁö¸¸ »óÈ²¸¶´Ù, ´Ù¸¦¼ö ÀÖ´Ù.
+ì „ì—­ë³€ìˆ˜ëŠ” ê°€ê¸‰ì  ì‚¬ìš©í•˜ì§€ ì•Šì•„ì•¼ í•˜ê³ 
+ë¡œì»¬ë³€ìˆ˜ëŠ” ì ê·¹ ì´ìš©í•˜ì—¬ì•¼ í•œë‹¤.
+í•˜ì§€ë§Œ ìƒí™©ë§ˆë‹¤, ë‹¤ë¥¼ìˆ˜ ìžˆë‹¤.
 
 <br>
 
-### Àü¿ª º¯¼ö Global variable
+### ì „ì—­ ë³€ìˆ˜ Global variable
 
 	#include
 	using namespace std;
@@ -16,23 +16,21 @@
 	int main()
 	{
 		cout << value << endl; //123
-		int value = 1;		   // ÀÌ º¯¼ö´Â Áö¿ªº¯¼ö·Î¼­ {}¹üÀ§¾È¿¡ ±¹ÇÑµÈ´Ù.
+		int value = 1;		   // ì´ ë³€ìˆ˜ëŠ” ì§€ì—­ë³€ìˆ˜ë¡œì„œ {}ë²”ìœ„ì•ˆì— êµ­í•œëœë‹¤.
 		cout << value << endl; //1
 
-		//Àü¿ªº¯¼ö value¸¦ »ç¿ëÇÏ°í ½Í´Ù¸é??
-		//¿µ¿ª¿¬»êÀÚ ::¸¦ »ç¿ëÇÏ¸é µÈ´Ù.
+		//ì „ì—­ë³€ìˆ˜ valueë¥¼ ì‚¬ìš©í•˜ê³  ì‹¶ë‹¤ë©´??
+		//ì˜ì—­ì—°ì‚°ìž ::ë¥¼ ì‚¬ìš©í•˜ë©´ ëœë‹¤.
 		cout << ::value << endl;
-
-
-
 
 		return 0;
 	}
 <br>
 
-### Á¤Àû º¯¼ö static variable
+### ì •ì  ë³€ìˆ˜ static variable
 
-1.
+1.<br>
+
 	#include<iostream>
 	using namespace std;
 
@@ -52,7 +50,8 @@
 
 <br>
 
-2. static º¯¼ö ÀÌ¿ëÇÏ±â
+2. static ë³€ìˆ˜ ì´ìš©í•˜ê¸°
+<Br>
 
 	#include<iostream>
 	using namespace std;
@@ -74,7 +73,8 @@
 
 <br>
 
-3. Àü¿ªº¯¼ö¸¦ »ç¿ëÇØ¼­ ¶È°°ÀÌ ¸¸µé±â
+3. ì „ì—­ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•´ì„œ ë˜‘ê°™ì´ ë§Œë“¤ê¸°
+<br>
 
 	#include<iostream>
 	using namespace std;
@@ -94,36 +94,40 @@
 		doSomething(); // 5
 	}
 
-1. ¹«¾ùÀÌ ½ºÅÂÆ½(Á¤Àû)ÀÏ±î??
-2. º¯¼ö a°¡ os·Î ºÎÅÍ ¹ÞÀº ¸Þ¸ð¸®°¡ staticÀÌ´Ù. (¸Þ¸ð¸® ÁÖ¼Ò°¡ Á¤ÀûÀ¸·Î ¼±¾ðµÈ´Ù)
-3. static º¯¼ö´Â ÃÊ±âÈ­°¡ ÇÑ¹ø¸¸ ÀÌ·ç¾îÁö°í, °°Àº ¸Þ¸ð¸® °ø°£À» »ç¿ëÇÏ°Ô µÈ´Ù.
-4. 1ÀÇ °æ¿ì aº¯¼ö´Â ÇÔ¼ö°¡ ÇÑ¹ø ½ÇÇà µÉ¶§¸¶´Ù ¸Þ¸ð¸®¸¦ ÇÒ´ç¹Þ°í »ç¶óÁö°í, 
-ÇÒ´ç¹Þ°í »ç¶óÁö°í ÇÏ°ÔµÉ°ÍÀÌ´Ù.
-5. 2ÀÇ °æ¿ì aº¯¼ö´Â ¸Þ¸ð¸®¸¦ ÇÑ¹ø ÇÒ´ç¹Þ°í, ÃÊ±âÈ­°¡ 1¹ø¸¸ ÀÌ·ç¾îÁø´Ù. 
-±×¸®°í Ç×»ó °°Àº ¸Þ¸ð¸® ÁÖ¼Ò¸¦ »ç¿ëÇÏ°Ô µÈ´Ù.
-6. ÇÔ¼ö°¡ ½ÇÇàµÉ°æ¿ì static aº¯¼ö´Â ¹Ì¸® »ç¿ë‰ç´ø aÀÇ °ªÀ» ±×´ë·Î »ç¿ëÇÑ´Ù.
-7. ´Ù½Ã¸»ÇØ static º¯¼ö°¡ ÃÊ±âÈ­°¡ µÇÁö ¾ÊÀ¸¸é ¾µ¼ö¾ø´Ù.
-8. ÇÔ¼ö°¡ ¸î¹ø È£ÃâµÇ´ÂÁö ÆÄ¾ÇµÉ¶§ »ç¿ëÇÏ¸é ÁÁ´Ù. (µð¹ö±ë½Ã)
+1. ë¬´ì—‡ì´ ìŠ¤íƒœí‹±(ì •ì )ì¼ê¹Œ??
+2. ë³€ìˆ˜ aê°€ osë¡œ ë¶€í„° ë°›ì€ ë©”ëª¨ë¦¬ê°€ staticì´ë‹¤. (ë©”ëª¨ë¦¬ ì£¼ì†Œê°€ ì •ì ìœ¼ë¡œ ì„ ì–¸ëœë‹¤)
+3. static ë³€ìˆ˜ëŠ” ì´ˆê¸°í™”ê°€ í•œë²ˆë§Œ ì´ë£¨ì–´ì§€ê³ , ê°™ì€ ë©”ëª¨ë¦¬ ê³µê°„ì„ ì‚¬ìš©í•˜ê²Œ ëœë‹¤.
+4. 1ì˜ ê²½ìš° aë³€ìˆ˜ëŠ” í•¨ìˆ˜ê°€ í•œë²ˆ ì‹¤í–‰ ë ë•Œë§ˆë‹¤ ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹ë°›ê³  ì‚¬ë¼ì§€ê³ , 
+í• ë‹¹ë°›ê³  ì‚¬ë¼ì§€ê³  í•˜ê²Œë ê²ƒì´ë‹¤.
+5. 2ì˜ ê²½ìš° aë³€ìˆ˜ëŠ” ë©”ëª¨ë¦¬ë¥¼ í•œë²ˆ í• ë‹¹ë°›ê³ , ì´ˆê¸°í™”ê°€ 1ë²ˆë§Œ ì´ë£¨ì–´ì§„ë‹¤. 
+ê·¸ë¦¬ê³  í•­ìƒ ê°™ì€ ë©”ëª¨ë¦¬ ì£¼ì†Œë¥¼ ì‚¬ìš©í•˜ê²Œ ëœë‹¤.
+6. í•¨ìˆ˜ê°€ ì‹¤í–‰ë ê²½ìš° static aë³€ìˆ˜ëŠ” ë¯¸ë¦¬ ì§€ì •ëœ aì˜ ê°’ì„ ê·¸ëŒ€ë¡œ ì‚¬ìš©í•œë‹¤.
+7. ë‹¤ì‹œë§í•´ static ë³€ìˆ˜ê°€ ì´ˆê¸°í™”ê°€ ë˜ì§€ ì•Šìœ¼ë©´ ì“¸ìˆ˜ì—†ë‹¤.
+8. í•¨ìˆ˜ê°€ ëª‡ë²ˆ í˜¸ì¶œë˜ëŠ”ì§€ íŒŒì•…ë ë•Œ ì‚¬ìš©í•˜ë©´ ì¢‹ë‹¤. (ë””ë²„ê¹…ì‹œ)
+
+<br>
 
 ### linkage
 
-linking, linker¿Í´Â ´Þ¸®
-¿¬°á ±× ÀÚÃ¼¸¦ ÀÇ¹ÌÇÏ´Â ´Ì¾Ó½º°¡ °­ÇÏ´Ù.
-local variable Àº ´Ù¸¥ ÆÄÀÏ°ú ¿¬°á½ÃÄÑÁÙ ÇÊ¿ä°¡¾ø´Ù.
-Àü¿ªº¯¼ö´Â ´Ù¸¥ ÆÄÀÏ¿¡¼­ »ç¿ëÀÌ °¡´ÉÇÏ´Ù.
+linking, linkerì™€ëŠ” ë‹¬ë¦¬
+ì—°ê²° ê·¸ ìžì²´ë¥¼ ì˜ë¯¸í•˜ëŠ” ëŠ¬ì•™ìŠ¤ê°€ ê°•í•˜ë‹¤.
+local variable ì€ ë‹¤ë¥¸ íŒŒì¼ê³¼ ì—°ê²°ì‹œì¼œì¤„ í•„ìš”ê°€ì—†ë‹¤.
+ì „ì—­ë³€ìˆ˜ëŠ” ë‹¤ë¥¸ íŒŒì¼ì—ì„œ ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤.
+
+<br>
 
 ### external linkage
 
-¿©·¯ cpp ÆÄÀÏ¿¡¼­ µ¿½Ã¿¡ »ç¿ëÇÒ¼ö ÀÖ´Â Àü¿ªº¯¼ö ¼ÂÆÃ
+ì—¬ëŸ¬ cpp íŒŒì¼ì—ì„œ ë™ì‹œì— ì‚¬ìš©í• ìˆ˜ ìžˆëŠ” ì „ì—­ë³€ìˆ˜ ì…‹íŒ…
 <br>
-cppÆÄÀÏ ÇÏ³ª Ãß°¡ÇØ¼­ ÄÚµùÇØº¸ÀÚ
+cppíŒŒì¼ í•˜ë‚˜ ì¶”ê°€í•´ì„œ ì½”ë”©í•´ë³´ìž
 
 	/* test.cpp */
 
 	#include<iostream>
 	using namespace std;
 
-	//extern int a; // ÃÊ±âÈ­°¡ ¾ÈµÇÀÖÀ¸¸é ¸Þ¸ð¸®°¡ ÇÒ´çµÇÁö ¾Ê´Â´Ù.
+	//extern int a; // ì´ˆê¸°í™”ê°€ ì•ˆë˜ìžˆìœ¼ë©´ ë©”ëª¨ë¦¬ê°€ í• ë‹¹ë˜ì§€ ì•ŠëŠ”ë‹¤.
 	extern int a = 123 ;
 
 	void doSomething()
@@ -131,15 +135,15 @@ cppÆÄÀÏ ÇÏ³ª Ãß°¡ÇØ¼­ ÄÚµùÇØº¸ÀÚ
 		cout << "Hello" << endl;
 	}
 
-	/* main.cpp */ ¿¡¼­ doSomethingÀ» ÇÏ°í ½Í´Ù!
+	/* main.cpp */ 		ì—ì„œ doSomethingì„ í•˜ê³  ì‹¶ë‹¤!
 	#include<iostream>
-	//#include"test.cpp" ÀÌ·±½Ãµµ´Â Àß ÇÏÁö ¾Ê´Â´Ù.
+	//#include"test.cpp" 	ì´ëŸ°ì‹œë„ëŠ” ìž˜ í•˜ì§€ ì•ŠëŠ”ë‹¤.
 	using namepace std;
 
-	extern void doSomething(); // ¾îµò°¡¿¡ doSomething ÇÔ¼ö°¡ ÀÖ´Ù.
-							   // ±×°ÍÀÇ Á¤ÀÇ¸¦ °®´ÙºÙ¿© »ç¿ëÇÏ¶ó ¶ó´Â ÀÇ¹Ì
-							   // extern ÀÌ¶ó´Â Å°¿öµå´Â »ý·«°¡´ÉÇÏ´Ù.
-	extern int a;			   // ¿©±â¼­µµ ÃÊ±âÈ­¸¦ ÇØÁÖ¸é, Áßº¹¿¡·¯°¡ ³­´Ù.
+	extern void doSomething(); 	// ì–´ë”˜ê°€ì— doSomething í•¨ìˆ˜ê°€ ìžˆë‹¤.
+					// ê·¸ê²ƒì˜ ì •ì˜ë¥¼ ê°–ë‹¤ë¶™ì—¬ ì‚¬ìš©í•˜ë¼ ë¼ëŠ” ì˜ë¯¸
+					// extern ì´ë¼ëŠ” í‚¤ì›Œë“œëŠ” ìƒëžµê°€ëŠ¥í•˜ë‹¤.
+	extern int a;			// ì—¬ê¸°ì„œë„ ì´ˆê¸°í™”ë¥¼ í•´ì£¼ë©´, ì¤‘ë³µì—ëŸ¬ê°€ ë‚œë‹¤.
 
 	int main()
 	{
@@ -148,10 +152,12 @@ cppÆÄÀÏ ÇÏ³ª Ãß°¡ÇØ¼­ ÄÚµùÇØº¸ÀÚ
 
 		return 0;
 	}
+	
+<br>
 
-### headerÀÇ ÀÌ¿ë½Ã ÁÖÀÇÁ¡
+### headerì˜ ì´ìš©ì‹œ ì£¼ì˜ì 
 
-Àü¿ª »ó¼ö´Â ±¦ÂúÀ»±î?
+ì „ì—­ ìƒìˆ˜ëŠ” ê´œì°®ì„ê¹Œ?
 
 	/* MyConstants.header */
 	#pragma once
@@ -188,7 +194,8 @@ cppÆÄÀÏ ÇÏ³ª Ãß°¡ÇØ¼­ ÄÚµùÇØº¸ÀÚ
 		doSomething();
 	}
 	
-¹®Á¦ ¾øÀÌ ½ÇÇàµÇ´Â°Í °°´Ù. ÀÌ¹ø¿£ piÀÇ ÁÖ¼Ò¸¦ ÇÑ¹ø Âï¾îº¸ÀÚ
+ë¬¸ì œ ì—†ì´ ì‹¤í–‰ë˜ëŠ”ê²ƒ ê°™ë‹¤. ì´ë²ˆì—” piì˜ ì£¼ì†Œë¥¼ í•œë²ˆ ì°ì–´ë³´ìž
+
 	/* test.cpp/
 
 	void doSomething()
@@ -205,9 +212,9 @@ cppÆÄÀÏ ÇÏ³ª Ãß°¡ÇØ¼­ ÄÚµùÇØº¸ÀÚ
 		doSomething();
 	}
 
-µÎ°³ÀÇ ÁÖ¼Ò´Â ´Ù¸£´Ù..
-¶ó´Â °ÍÀº! ÀÌ·±½ÄÀ¸·Î contants::pi¸¦ ¸¹ÀÌ »ç¿ëÇÏ°Ô µÇ¸é ±×¸¸Å­ ³¶ºñÇÏ°Ô µÈ´Ù´Â °ÍÀÌ´Ù.
-¾î¶»°Ô ÇÏ¸é ÀÌ·¯ÇÑ ³¶ºñ¸¦ ¹æÁö ÇÒ¼öÀÖÀ»±î.
-ÀÏ´Ü cppÆÄÀÏÀ» ÇÏ³ª ´õ ¸¸µç´Ù.
-±×°÷¿¡ namespace constatnsÀÇ **Á¤ÀÇ¸¦ÇÑ´Ù.**
-±×¸®°í Çì´õ¿¡´Â ¼±¾ð¸¸ ÇØÁØ´Ù.
+ë‘ê°œì˜ ì£¼ì†ŒëŠ” ë‹¤ë¥´ë‹¤..<br>
+ë¼ëŠ” ê²ƒì€! ì´ëŸ°ì‹ìœ¼ë¡œ contants::pië¥¼ ë§Žì´ ì‚¬ìš©í•˜ê²Œ ë˜ë©´ ê·¸ë§Œí¼ ë‚­ë¹„í•˜ê²Œ ëœë‹¤ëŠ” ê²ƒì´ë‹¤.<br>
+ì–´ë–»ê²Œ í•˜ë©´ ì´ëŸ¬í•œ ë‚­ë¹„ë¥¼ ë°©ì§€ í• ìˆ˜ìžˆì„ê¹Œ.<br>
+ì¼ë‹¨ cppíŒŒì¼ì„ í•˜ë‚˜ ë” ë§Œë“ ë‹¤.<br>
+ê·¸ê³³ì— namespace constatnsì˜ **ì •ì˜ë¥¼í•œë‹¤.**<br>
+ê·¸ë¦¬ê³  í—¤ë”ì—ëŠ” ì„ ì–¸ë§Œ í•´ì¤€ë‹¤. ë‹¨ ìžë£Œí˜•ì—ëŠ” ì™¸ë¶€ì—ì„œë„ ì´ìš©ë ìˆ˜ ìžˆê²Œ externì„ ê¼­ ë¶™ì—¬ì¤€ë‹¤.<br>
