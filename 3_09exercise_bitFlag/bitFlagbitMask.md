@@ -1,8 +1,8 @@
-## 3-9°­ ºñÆ®¸¶½ºÅ©, ºñÆ®ÇÃ·¡±×
+## 3-9ê°• ë¹„íŠ¸ë§ˆìŠ¤í¬ì™€ ë¹„íŠ¸í”Œëž˜ê·¸
 
 <br>
 
-### °¢°¢ÀÇ boolº¯¼ö¿¡ ÀÇÇÑ ÇÃ·¡±× : °ÔÀÓ ¾ÆÀÌÅÛÀÇ µæ½Ç
+### ê²Œìž„ ì•„ì´í…œì˜ ë“ì‹¤ : 1. ê° boolë³€ìˆ˜ì— ì˜í•œ í”Œëž˜ê·¸
 	
 	#include<iostream>
 	using namespace std;
@@ -15,13 +15,13 @@
 		bool item3_flag = false;
 		bool item4_flag = false;
 
-		//event ¾ÆÀÌÅÛÀ» ¸ÔÀ½
+		//event ì•„ì´í…œì„ ë¨¹ìŒ
 		item1_flag = true;
 
-		//die Á×¾î¼­ ¾ÆÀÌÅÛÀ» ¶³±À
+		//die ì£½ì–´ì„œ ì•„ì´í…œì„ ë–¨êµ¼
 		item1_falg = false;
 
-		//Æ¯Á¤ÇÑ ¾ÆÀÌÅÛ »ç¿ë
+		//íŠ¹ì •í•œ ì•„ì´í…œ ì‚¬ìš©
 		if (item3_flag == true && item4_falg = false)
 		{
 			item3_flag = false;
@@ -30,12 +30,12 @@
 		
 		return 0;
 	}
-ÀÌ·±½ÄÀ¸·Î ÄÚµùÇÑ´Ù¸é ¾ÆÀÌÅÛÀÌ 32°³°¡ ÀÖ´Ù¸é 32°³ÀÇ ÇÃ·¡±×¸¦ °¢°¢ ¸¸µé¾î¾ß ÇÒ°ÍÀÌ°í,
-º¸±âµµ ºÒÆíÇÏ´Ù.
+ì´ëŸ°ì‹ìœ¼ë¡œ ì½”ë”©í•œë‹¤ë©´ ì•„ì´í…œì´ 32ê°œê°€ ìžˆë‹¤ë©´ 32ê°œì˜ í”Œëž˜ê·¸ë¥¼ ê°ê° ë§Œë“¤ì–´ì•¼ í• ê²ƒì´ê³ ,
+ë³´ê¸°ë„ ë¶ˆíŽ¸í•˜ë‹¤.
 
 <br>
 
-### ºñÆ®ÇÃ·¡±× ÀÌ¿ë¹ý : °ÔÀÓ ¾ÆÀÌÅÛÀÇ µæ½Ç
+### ê²Œìž„ ì•„ì´í…œì˜ ë“ì‹¤ : 2.ë¹„íŠ¸í”Œëž˜ê·¸ ì´ìš©ë²•
 
 	#include<iostream>
 	#include<bitset>
@@ -43,37 +43,39 @@
 
 	int main()
 	{
+		//ê°ê° ì•„ì´í…œë“¤ì˜ í”Œëž˜ê·¸
 		const usigned char opt0 = 1 << 0;
 		const usigned char opt1 = 1 << 1;
 		const usigned char opt2 = 1 << 2;
 		const usigned char opt3 = 1 << 3;
 		// opt 4, 5, 6, 7...
 
-		cout << bitset<8>(opt0) << endl;							// 0000 0001
-		cout << bitset<8>(opt1) << endl;							// 0000 0010
-		cout << bitset<8>(opt2) << endl;							// 0000 0100
-		cout << bitset<8>(opt3) << endl;							// 0000 1000
+		cout << bitset<8>(opt0) << endl;			    // 0000 0001
+		cout << bitset<8>(opt1) << endl;			    // 0000 0010
+		cout << bitset<8>(opt2) << endl;			    // 0000 0100
+		cout << bitset<8>(opt3) << endl;			    // 0000 1000
+		
+		//ì´ˆì°½ê¸° ë‚´ ì•„ì´í…œ í”Œëž˜ê·¸(ê³µë°±ì˜ ì¸ë²¤í† ë¦¬)
+		unsigend char items_flag = 0;					
+		cout << "no item " << bitset<8>(items_flag) << endl;        //no item ìƒíƒœì´ë¯€ë¡œ item_flagëŠ” 0000 0000 
 
-		//¾ÆÀÌÅÛ ÇÃ·¡±×¸¦ ºñÆ® ¸¶½ºÅ©·Î ÀÌ¿ëÇÑ´Ù¸é
-		unsigend char items_flag = 0;								//ÃÊÃ¢±â ¾ÆÀÌÅÛ ÇÃ·¡±×
-		cout << "no item " << bitset<8>(items_flag) << endl;		//no item »óÅÂÀÌ¹Ç·Î item_flag´Â 0000 0000ÀÌ´Ù. 
 
-
-		// item0 get! ¾ÆÀÌÅÛÀÇ µæ
-		items_flag |= opt0											//items_flag = items_flag | opt0; ¿Í °°Àº ÀÇ¹Ì 
-		cout << "item0 obtained " << bitset<8>(items_flag) << endl;	//item0À» ¾ò¾úÀ¸¹Ç·Î item_flag´Â 0000 0001ÀÌ´Ù.
+		// item0 get! ì•„ì´í…œì˜ ë“
+		items_flag |= opt0					    //items_flag = items_flag | opt0; ì™€ ê°™ì€ ì˜ë¯¸ 
+		cout << "item0 obtained " << bitset<8>(items_flag) << endl; //item0ì„ ì–»ì—ˆìœ¼ë¯€ë¡œ item_flagëŠ” 0000 0001
 		// item3 get!
 		items_flag |= opt3
-		cout << "item3 obtained " << bitset<8>(items_flag) << endl;	//item3À» ¾ò¾úÀ¸¹Ç·Î item_flag´Â 0000 0101ÀÌ´Ù.
-		// item3 los ¾ÆÀÌÅÛÀÇ ½Ç
-		items_falg &= ~opt3											//¹«¾ùÀ» ÀÇ¹ÌÇÏ´ÂÁö Àß »ý°¢ÇØº¸ÀÚ!!
-		cout << "item3 lost " << bitset<8>(items_flag) << endl;		//item3À» ´Ù½Ã ÀÒ¾úÀ¸¹Ç·Î item_flag´Â 0000 0001ÀÌ´Ù.
+		cout << "item3 obtained " << bitset<8>(items_flag) << endl; //item3ì„ ì–»ì—ˆìœ¼ë¯€ë¡œ item_flagëŠ” 0000 0101
+		// item3 los ì•„ì´í…œì˜ ì‹¤
+		items_falg &= ~opt3					    //ë¬´ì—‡ì„ ì˜ë¯¸í•˜ëŠ”ì§€ ìž˜ ìƒê°í•´ë³´ìž!!
+		cout << "item3 lost " << bitset<8>(items_flag) << endl;	    //item3ì„ ë‹¤ì‹œ ìžƒì—ˆìœ¼ë¯€ë¡œ item_flagëŠ” 0000 0001
 
 
-		// has item1?? ¾ÆÀÌÅÛÀÇ ¼ÒÁö ¿©ºÎ ÆÇ´Ü						// ¾ÆÀÌÅÛ1 À» ¼ÒÁö ÇÏ°í ÀÖ´Â°¡??
+
+		// has item1?? ì•„ì´í…œì˜ ì†Œì§€ ì—¬ë¶€ íŒë‹¨			// ì•„ì´í…œ1 ì„ ì†Œì§€ í•˜ê³  ìžˆëŠ”ê°€??
 		if (items_flag & opt1)										
-			cout << "has item1" << endl;							// 0000 0001 $ 0000 0010 ÀÌ ÂüÀÌ¶ó¸é
-		else														// ÀÌ°ÍÀÌ ¹«¾ùÀ» ÀÇ¹ÌÇÏ´ÂÁö Àß »ý°¢ÇØ º¸ÀÚ!
+			cout << "has item1" << endl;			// 0000 0001 & 0000 0010 ì´ ì°¸ì´ë¼ë©´
+		else							// ì´ê²ƒì´ ë¬´ì—‡ì„ ì˜ë¯¸í•˜ëŠ”ì§€ ìž˜ ìƒê°í•´ ë³´ìž!
 			cout << "Not have item1" << endl;						
 		// has item0??
 		if (items_flag & opt1)
@@ -83,33 +85,35 @@
 
 		
 
-		// µ¿½Ã¿¡ ¿©·¯°³ÀÇ ¾ÆÀÌÅÛÀ» ¾òÀ»¶§
-		items_falg |= (opt2 | opt3);								// 2, 3 ¾ÆÀÌÅÛÀ» | ¿¬»ê ÇÏ°í, ´Ù½Ã ³» items_flag¿¡ | ½ÃÅ²´Ù!
+		// ë™ì‹œì— ì—¬ëŸ¬ê°œì˜ ì•„ì´í…œì„ ì–»ì„ë•Œ
+		items_falg |= (opt2 | opt3);				// ì˜ë¯¸í•˜ëŠ” ë°”ë¥¼ ì°¨ë¶„ížˆ ìƒê°í•´ë³´ìž!
 		cout << bitset<8>(opt2 | opt3) << endl;
-		cout << "item2, 3 obtained" << bitset<8>(items_flag) <<endl;// 0000 1101
+		cout << "item2, 3 obtained" << bitset<8>(items_flag) <<endl;
 
 		
-		//¾ÆÀÌÅÛ2¸¦ °®°íÀÖ°í, ¾ÆÀÌÅÛ1À» °®°íÀÖÁö ¾ÊÀ»°æ¿ì			
-		if ((items_flag & opt2) && !(items_flag & opt1))			// ¹«¾ùÀ» ÀÇ¹ÌÇÏ´ÂÁö »ý°¢ÇØº¸ÀÚ! &&´Â Áø¸®¿¬»êÀÚ
+		//ì•„ì´í…œ2ë¥¼ ê°–ê³ ìžˆê³ , ì•„ì´í…œ1ì„ ê°–ê³ ìžˆì§€ ì•Šì„ê²½ìš°			
+		if ((items_flag & opt2) && !(items_flag & opt1))	// ë¬´ì—‡ì„ ì˜ë¯¸í•˜ëŠ”ì§€ ìƒê°í•´ë³´ìž! &&ëŠ” ì§„ë¦¬ì—°ì‚°ìž
 		{
-			items_flag ^= opt2;										// ^ ¿¬»êÀÚ°¡ ¹«¾ùÀ» ÀÇ¹ÌÇÏ´ÂÁö¿Í ÀÌ ÄÚµå°¡ ¹»ÀÇ¹Ì ÇÏ´ÂÁö Àß »ý°¢ÇØº¸ÀÚ!
-			items_flag ^= opt1;										// 0000 1101 ^ 0000 0100
-			//¼÷Á¦ ÇÑÁÙ·Î ¹Ù²ãº¸±â!									// 0000 1101 ^ 0000 0010
-			itmes_flag ^= (opt2 | opt1);
+			items_flag ^= opt2;				// ^ ì—°ì‚°ìžì™€ ì½”ë“œê°€ ì˜ë¯¸í•˜ëŠ” ë°”ë¥¼ ìž˜ ìƒê°í•´ë³´ìž!
+			items_flag ^= opt1;			        // 0000 1101 ^ 0000 0100
+			//ìˆ™ì œ í•œì¤„ë¡œ ë°”ê¿”ë³´ê¸°!				 // 0000 1101 ^ 0000 0010
+			ë‹µ : itmes_flag ^= (opt2 | opt1);
 
-			cout << bitset<8>(items_flag) << endl;					// ¾ÆÀÌÅÛ2¸¦ ¾ø¾Ö°í, ¾ÆÀÌÅÛ 1À» ÀÖ°Ô ÇÑ´Ù!
-																	// µû¶ó¼­ items flag´Â 1011
+			cout << bitset<8>(items_flag) << endl		// ì•„ì´í…œ2ë¥¼ ì—†ì• ê³ , ì•„ì´í…œ 1ì„ ìžˆê²Œ í•œë‹¤!
+									// ë”°ë¼ì„œ items flagëŠ” 1011
 		}
 		return 0;
 	}
 
 <br>
 
-### ºñÆ® ¸¶½ºÅ© : color tableÀÇ ¿¹
+### ë¹„íŠ¸ ë§ˆìŠ¤í¬ : color tableì˜ ì˜ˆ
 
-16Áø¼ö 3°³ÀÇ Á¶ÇÕÀ¸·Î Ç¥ÇöÇÑ´Ù. #RRGGBB ¼ø¼­·Î ·¹µå, ±×¸°, ºí·ç 
-16^1*15 + 16^0*15 = 255 
-°¢°¢ÀÇ ½ºÆÑÆ®·³ÀÌ 0ºÎÅÍ 255 Áï 256°¡ÁöÀÓ, ±×·±µ¥ ÀÌ´Â 2^8ÀÌ°í(¾ÖÃÊ¿¡ 16ÀÌ 2ÀÇ 4½ÂÀÌ´Ù.) 2Áø¼ö¿Í È£È¯ÀÌ ¿ëÀÌÇÏ´Ù.
+1. colorí…Œì´ë¸”ì€ 16ì§„ìˆ˜ 3ê°œì˜ ì¡°í•©ìœ¼ë¡œ ìƒ‰ì„ í‘œí˜„í•œë‹¤. ìˆœì„œëŠ” ë ˆë“œ, ê·¸ë¦°, ë¸”ë£¨ 
+2. ìµœëŒ€ê°’ì€ FF, 10ì§„ìˆ˜ë¡œ ë°”ê¾¸ë©´ (16^1)x15 + (16^0)x15 = 255ë¡œ ê° ìƒ‰ì´ 0ë¶€í„° 255 ì¦‰ 256ê°€ì§€ì˜ ìŠ¤íŒ©íŠ¸ëŸ¼ì„ ê°–ëŠ”ë‹¤. 
+3. ê·¸ëŸ°ë° ì´ëŠ” 2ì˜ 8ìŠ¹ì´ê³ (ì• ì´ˆì— 16ì´ 2ì˜ 4ìŠ¹ì´ë‹¤.) 2ì§„ìˆ˜ì™€ í˜¸í™˜ì´ ìš©ì´í•˜ë‹¤. 2ì§„ìˆ˜ 8ìžë¦¬ìˆ˜ì”© í•œ ìƒ‰ì´ í‘œí˜„
+
+<br>
 
 	#include<iostream>
 	#include<bitset>
@@ -132,24 +136,28 @@
 		
 		unsigned char green = pixel_color & green_mask;
 		cout << "green " << bitset<8>(green) << " " << int(green) << endl;		
-		//À§ÄÚµå´Â ¿Ö ¿øÇÏ´Â ´ë·Î µÇÁö ¾ÊÀ»±î?
-		//ÀÌÀ¯´Â charÇüÀº 1¹ÙÀÌÆ®±â ¶§¹®¿¡ Áø¼ö8ÀÚ¸®¼ö ÀÌ»óÀ» ¹ÞÁö ¸øÇÑ´Ù.
-		//±×·¸´Ù¸é
+		/*ìœ„ì½”ë“œëŠ” ì™œ ì›í•˜ëŠ” ëŒ€ë¡œ ë˜ì§€ ì•Šì„ê¹Œ?
+		->ì´ìœ ëŠ” charí˜•ì€ 1ë°”ì´íŠ¸ê¸° ë•Œë¬¸ì— 8ìžë¦¬ìˆ˜ ì´ìƒì˜ ìˆ˜ë¥¼ ì²˜ë¦¬í• ìˆ˜ ì—†ê¸° ë•Œë¬¸ì´ë‹¤.*/
+		
+		//ê·¸ë ‡ë‹¤ë©´
 		unsigned int green = pixel_color & green_mask; 
 		cout << "green " << bitset<16>(green) << " " << int(green) << endl;
-		//¶ó°í ¼öÁ¤ÇÏ¸é ¿øÇÏ´Â °á°ú°¡ Á¦´ë·Î ³ª¿Ã±î??
-		//¾Æ´Ï´Ù 10101010 00000000 ÀÌ·±½ÄÀ¸·Î ³ª¿À°Ô µÉ°ÍÀÌ´Ù. µû¶ó¼­ >> ¿¬»êÀÚ¸¦ ³Ö¾îÁà¾ß ÇÑ´Ù.
+		/*ë¼ê³  ìˆ˜ì •í•˜ë©´ ì›í•˜ëŠ” ê²°ê³¼ê°€ ì œëŒ€ë¡œ ë‚˜ì˜¬ê¹Œ??
+		ì•„ë‹ˆë‹¤, ì¢€ë” ê°€ê¹ê¸´ í•˜ì§€ë§Œ 10101010 00000000 ì´ëŸ°ì‹ìœ¼ë¡œ ë‚˜ì˜¤ê²Œ ë ê²ƒì´ë‹¤. 
+		ì´ë¥¼ í•´ê²°í•˜ê¸° ìœ„í•´ì„œëŠ”, >>(right shift) ì—°ì‚°ìžë¥¼ ë„£ì–´ì¤˜ì•¼ í•œë‹¤.*/
 
-		cout << "green " << bitset<8>(green >> 8) << " " << int(green) << endl;
+		cout << "green " << bitset<8>(green >> 8) << " " << (green >> 8) << endl;
 
-		¼÷Á¦ red ÇØº¸±â!
+		//ìˆ™ì œ red í•´ë³´ê¸°!
+		unsigned int red = pixel_color & red_mask;
+		cout << "red " << bitset<8>(red >> 24) << (red >> 16) << endl;
 		
 		return 0;
 	}
 
 <br>
 
-### ºñÆ®ÇÃ·¡±× ½Ç¿ë¿¹Á¦
+### ë¹„íŠ¸í”Œëž˜ê·¸ ì‹¤ìš©ì  ì˜ˆ
 
 	#include <iostream>
 	#include <bitset>
@@ -161,4 +169,4 @@
 		return 0;
 	}
 
-glclear ÇÔ¼ö°°ÀÌ ÆÄ¶ó¹ÌÅÍ°¡ ¾öÃ»¸¹Àº°æ¿ì¿¡ ºñÆ®¿¬»êÀ» ¾²´Â°ÍÀÌ È¿À²ÀûÀÌ´Ù.
+glclear í•¨ìˆ˜ê°™ì´ íŒŒë¼ë¯¸í„°ê°€ ì—„ì²­ ë§Žì€ ê²½ìš°ì— ë¹„íŠ¸ì—°ì‚°ì„ ì“°ëŠ”ê²ƒì´ íš¨ìœ¨ì ì´ë‹¤.
