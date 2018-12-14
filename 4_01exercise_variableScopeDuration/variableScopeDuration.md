@@ -1,31 +1,34 @@
-## 4-1°­ Áö¿ªº¯¼öÀÇ ¹üÀ§¿Í Áö¼Ó±â°£
+## 4-1ê°• ì§€ì—­ë³€ìˆ˜ì˜ ë²”ìœ„ì™€ ì§€ì†ê¸°ê°„
 
 <br>
 
-### º¯¼öÀÇ ¹üÀ§¿Í Áö¼Ó±â°£
+### ë³€ìˆ˜ì˜ ë²”ìœ„ì™€ ì§€ì†ê¸°ê°„
+<br>
 
-1. ¹üÀ§´Â ´«À¸·Î º¼¼ö ÀÖ´Â ¹üÀ§¶ó´Â Ãø¸éÀÌ °­ÇÔ
-2. Áö¼Ó±â°£Àº ¸Þ¸ð¸®ÀÇ Áö¼Ó±â°£À» ÀÇ¹Ì
-3. ¹üÀ§¿Í Áö¼Ó±â°£Àº °°ÀÌ °¡´Â °ÍÀÌ³ª, ´µ¾Ó½º Â÷ÀÌ°¡ ÀÖÀ½
+1. ë²”ìœ„ëŠ” ëˆˆìœ¼ë¡œ ë³¼ìˆ˜ ìžˆëŠ” ë²”ìœ„ë¼ëŠ” ì¸¡ë©´ì´ ê°•í•¨
+2. ì§€ì†ê¸°ê°„ì€ ë©”ëª¨ë¦¬ì˜ ì§€ì†ê¸°ê°„ì„ ì˜ë¯¸
+3. ë²”ìœ„ì™€ ì§€ì†ê¸°ê°„ì€ ê°™ì´ ê°€ëŠ” ê²ƒì´ë‚˜, ë‰˜ì•™ìŠ¤ ì°¨ì´ê°€ ìžˆìŒ
+
+<br>
 
 	#include<iostream>
 	using namespace std;
 
 	int main()
 	{
-		apple = 5;			// ¹Ù·Î ¹Ø¿¡ appleº¯¼ö°¡ ¼±¾ðµÇ¾î ÀÖÀ½¿¡µµ
-							// »ç¿ëÇÒ¼ö ¾ø´Ù.
+		apple = 5;			// ë°”ë¡œ ë°‘ì— appleë³€ìˆ˜ê°€ ì„ ì–¸ë˜ì–´ ìžˆìŒì—ë„
+						// ì‚¬ìš©í• ìˆ˜ ì—†ë‹¤.
 
-		int apple = 5;		// ÀÌ½ÃÁ¡ ºÎÅÍ º¯¼ö appleÀ» »ç¿ëÇÒ¼ö ÀÖÀ½
+		int apple = 5;			// ì´ì‹œì  ë¶€í„° ë³€ìˆ˜ appleì„ ì‚¬ìš©í• ìˆ˜ ìžˆìŒ
 		cout << apple << endl;
 		
 		if(ture)
 		{
-			apple = 1;		// ´õÅ« ¹üÀ§¿¡¼­ ¼±¾ðµÈ appleÀ» »ç¿ëÇÏ´Â °ÍÀÌ °¡´ÉÇÏ´Ù.
+			apple = 1;		// ë”í° ë²”ìœ„ì—ì„œ ì„ ì–¸ëœ appleì„ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
 			cout << apple << endl;
-			int apple = 2;	// »õ·ÓÁö¸¸ ÀÌ¸§ÀÌ °°Àº ¶È°°Àº appleÀ» ¼±¾ðÇÏ´Â°ÍÀÌ °¡´ÉÇÏ´Ù.
-							// ÇÏÁö¸¸ ¹üÀ§´Â {}³»ºÎ ±îÁöÀÌ´Ù.
-							// °¡±ÞÀû ÀÌ·±½ÄÀÇ namingÀº ÇÇÇÏ´Â°ÍÀÌ ÁÁ´Ù.
+			int apple = 2;		// ìƒˆë¡­ì§€ë§Œ ì´ë¦„ì´ ê°™ì€ ë˜‘ê°™ì€ appleì„ ì„ ì–¸í•˜ëŠ”ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
+						// í•˜ì§€ë§Œ ë²”ìœ„ëŠ” {}ë‚´ë¶€ ê¹Œì§€ì´ë‹¤.
+						// ê°€ê¸‰ì  ì´ëŸ°ì‹ì˜ namingì€ í”¼í•˜ëŠ”ê²ƒì´ ì¢‹ë‹¤.
 		}
 
 		cout << apple << endl; // 1
@@ -33,9 +36,9 @@
 		return 0;
 	}
 	
-	apple = 5;				// {}¹þ¾î³­ ½ÃÁ¡¿¡¼­ appleº¯¼ö¸¦ ÀÌ¿ëÇÒ¼ö ¾øÀ½
+	apple = 5;				// {}ë²—ì–´ë‚œ ì‹œì ì—ì„œ appleë³€ìˆ˜ë¥¼ ì´ìš©í• ìˆ˜ ì—†ìŒ
 
->Çö´ëÀÇ ÄÚµùÀº º¯¼öÀÇ ¹üÀ§¸¦ ÃÖ¼ÒÈ­ ÇÏ´Â ¹æÇâÀ» ÁöÇâÇÑ´Ù.
+>í˜„ëŒ€ì˜ ì½”ë”©ì€ ë³€ìˆ˜ì˜ ë²”ìœ„ë¥¼ ìµœì†Œí™” í•˜ëŠ” ë°©í–¥ì„ ì§€í–¥í•œë‹¤.
 
 <br>
 
@@ -58,9 +61,9 @@
 	 		 b += 5;
 		}
 	}
-	//cf) ÀÌ¸§ÀÌ °°Áö¸¸ ÆÄ¶ó¹ÌÅÍ°¡ ´Ù¸¦ °æ¿ì ´Ù¸¥ ÇÔ¼ö·Î Ã³¸®ÇÑ´Ù. 
+	//cf) ì´ë¦„ì´ ê°™ì§€ë§Œ íŒŒë¼ë¯¸í„°ê°€ ë‹¤ë¥¼ ê²½ìš° ë‹¤ë¥¸ í•¨ìˆ˜ë¡œ ì²˜ë¦¬í•œë‹¤. 
 	
-	//cpp17¿¡¼­´Â ÀÌ·¯ÇÑ ³×ÀÓ½ºÆäÀÌ½º ÁöÁ¤ ¹®¹ýÀ» Áö¿øÇÔ
+	//cpp17ì—ì„œëŠ” ì´ëŸ¬í•œ ë„¤ìž„ìŠ¤íŽ˜ì´ìŠ¤ ì§€ì • ë¬¸ë²•ì„ ì§€ì›í•¨
 	namepace work1::work11::work111
 	{
 		int a = 3;
@@ -72,24 +75,14 @@
 	{
 		using namespace std;
 
-		work1::a;				// ::Àº ¹üÀ§ÁöÁ¤ ¿¬»êÀÚ
+		work1::a;				// ::ì€ ë²”ìœ„ì§€ì • ì—°ì‚°ìž
 		work1::doSomething();
 
 		work2::a;
 		work2::doSomething();
 
 		work1::work11::work111::doSomething();
-		//ÀÏ¹ÝÀûÀ¸·Î depth¸¦ ±í°ÔÇÏ´À°ÍÀº ÇÇÇÏ´Â °ÍÀÌ ÁÁ´Ù.
+		//ì¼ë°˜ì ìœ¼ë¡œ depthë¥¼ ê¹Šê²Œí•˜ëŠê²ƒì€ í”¼í•˜ëŠ” ê²ƒì´ ì¢‹ë‹¤.
 
 		return 0;
 	}
-
-
-
-	 
-
-
-
-
-
-
