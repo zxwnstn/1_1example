@@ -46,7 +46,7 @@
 		int age;
 		string name;
 	
-	};	// **struct에도 꼭 ;가 들어간다!!**
+	};	// struct에도 꼭 ;가 들어간다!!
 
 	void printPerson(Person person1)
 	{
@@ -67,8 +67,8 @@
 		Person me{2.0, 100.0, 20, "jack jack"};
 
 		pintPerson(me);
-
-
+		
+		return 0;
 	}
 
 <br>
@@ -88,8 +88,8 @@
 
 		void print()
 		{
-			cout << height << weight << age << name << endl;	// 여기서는 구조체내 변수에 바로접근할수 있기때문에
-		}								//xperson.height형태의 이름을 안적어 줘도 된다. 
+			cout << height << weight << age << name << endl;// 여기서는 구조체내 변수에 바로접근할수 있기때문에
+		}							//xperson.height형태의 struct 이름을 안적어 줘도 된다. 
 	};
 
 	int main()
@@ -100,9 +100,10 @@
 		me.print() 	// Person이라는 구조체 안에 print 함수를 그냥 사용할수있다.
 
 		Person me2;
-		me2 = me1;	// 이경우에는 내가 원하는대로 작동 안할수있다. 이경우에는 잘됨
+		me2 = me1;	// 내가 원하는대로 작동 안할수있다. 이 경우에는 잘됨
 		me2.print();	// 클래스 같은경우 대입 오퍼레이터의 부작용 주의
-
+		
+		return 0;
 
 	}
 
@@ -143,6 +144,8 @@
 	{
 		Person me_from_func = getMe()
 		me_from_func.print();
+		
+		return 0;
 	}
 	
 <br>
@@ -163,6 +166,8 @@
 		cout << me.name << endl;		// 초기화를 안했다면, 초기화한 내용을 가져온다.
 
 		Person Junsoo{2.0, 168.0, 28, "Junsoo-Kang"}
+		
+		return 0;
 	}
 
 ### struct자료형의 크기
@@ -180,5 +185,5 @@
 		
 		cout << sizeof(Employee) << endl;	//16??
 							//컴파일러가 자료배치상 안되는 부분때문에 +2가 된다.
-							// 2 + 4 + 8 + (2) 여기서 (2)를 패딩이라고 한다.
+		return 0;				// 2 + 4 + 8 + (2) 여기서 (2)를 패딩이라고 한다.
 	}
