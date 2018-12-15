@@ -1,38 +1,35 @@
-## ÀÚ·áÇü¿¡°Ô °¡¸í ºÙ¿©ÁÖ±â
+## ìë£Œí˜•ì—ê²Œ ê°€ëª… ë¶™ì—¬ì£¼ê¸°
 
 <br>
-
-###
-	
 	#include<iostream>
 	#include<vector>
 	using namespace std;
 
 	int main()
 	{
-		typedef double distance_t // ³»°¡ distance_t¸¦ ¾´ÀÇµµ´Â 
-								  // ´õºíÀ» °Å¸®ÀÇ ÀÚ·áÇüÀ¸·Î ¾´´Ù´Â°ÍÀÌ´Ù.
+		typedef double distance_t // ë‚´ê°€ distance_të¥¼ ì“´ì˜ë„ëŠ” 
+								  // ë”ë¸”ì„ ê±°ë¦¬ì˜ ìë£Œí˜•ìœ¼ë¡œ ì“´ë‹¤ëŠ”ê²ƒì´ë‹¤.
 
 		doulbe		my_distance;
 		distance_t	home2work;
 		distance_t	home2school;
 
-		//typeÀÌ ¸Å¿ì ±æ¶§
+		//typeì´ ë§¤ìš° ê¸¸ë•Œ
 		std::vector<std::pair<std::string, int> >pairlist;
 		vector<pair<string, int> >pairlist 1;
 		vector<pair<string, int> >pairlist 2;
-		vector<pair<string, int> >pairlist 3;	// º¸±â ÆíÇÏÁö´Â ¾Ê´Ù.
+		vector<pair<string, int> >pairlist 3;	// ë³´ê¸° í¸í•˜ì§€ëŠ” ì•Šë‹¤.
 
-		typedef vector<pair<string, int> > pairlist_t; // typedef·Î ÁÙ¿©ÁØ´Ù.
+		typedef vector<pair<string, int> > pairlist_t; // typedefë¡œ ì¤„ì—¬ì¤€ë‹¤.
 
 		pairlist_t pairlist1;
 		pairlist_t pairlist2;
 
-		// usingÀ» »ç¿ëÇÏ±â
+		// usingì„ ì‚¬ìš©í•˜ê¸°
 		using pairlist_t = vector<pair<string, int> > ;
-		//´ëÀÔÃ³·³ º¸ÀÌ³ª, ³»ºÎÀûÀ¸·Î ºÃÀ¸¶§ ¸Ş¸ğ¸®¸¦ Â÷ÁöÇÏ°Ô ÇÏ´Â ´ëÀÔÀº ¾Æ´Ï´Ù.
-		//ÀÌ°ÍÀº ±×Àú compiler¿¡°Ô ÀÌ·¯ÇÑ ÀÌ¸§À» »ç¿ë ÇÏ°Ú´Ù ¶ó°í ¾Ë·ÁÁÖ´Â °ÍÀÌ´Ù.
-		//typedef¿Í Å©°Ô ´Ù¸£Áö ¾Ê´Ù.
+		//ëŒ€ì…ì²˜ëŸ¼ ë³´ì´ë‚˜, ë‚´ë¶€ì ìœ¼ë¡œ ë´¤ìœ¼ë•Œ ë©”ëª¨ë¦¬ë¥¼ ì°¨ì§€í•˜ê²Œ í•˜ëŠ” ëŒ€ì…ì€ ì•„ë‹ˆë‹¤.
+		//ì´ê²ƒì€ ê·¸ì € compilerì—ê²Œ ì´ëŸ¬í•œ ì´ë¦„ì„ ì‚¬ìš© í•˜ê² ë‹¤ ë¼ê³  ì•Œë ¤ì£¼ëŠ” ê²ƒì´ë‹¤.
+		//typedefì™€ í¬ê²Œ ë‹¤ë¥´ì§€ ì•Šë‹¤.
 
 		return 0;
 	}
