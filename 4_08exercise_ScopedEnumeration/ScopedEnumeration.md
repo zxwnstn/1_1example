@@ -1,8 +1,9 @@
-## ¿µ¿ª Á¦ÇÑ ¿­°ÅÇü(¿­°ÅÇü Å¬·¡½º)
+## ì˜ì—­ ì œí•œ ì—´ê±°í˜•(ì—´ê±°í˜• í´ë˜ìŠ¤)
 
-enumÀÇ ´ÜÁ¡ º¸¿Ï
+enumì˜ ë‹¨ì  ë³´ì™„
+<br>
 
-### enumÀÇ ´ÜÁ¡
+### enumì˜ ë‹¨ì 
 
 	#include<iostream>
 	using namespace std;
@@ -24,7 +25,7 @@ enumÀÇ ´ÜÁ¡ º¸¿Ï
 		Color color = RED;
 		Fruit fruit = BANANA;
 		if ( color == fruit)
-			cout << "Color is fruit?" << endl;	// °ú¿¬ °°³ª? ¹İÈ¯µÈ °ªÀº °°´Ù°í ÇÒ¼öÀÖµû 
+			cout << "Color is fruit?" << endl;	// ê³¼ì—° ê°™ë‚˜? ë°˜í™˜ëœ ê°’ì€ ê°™ë‹¤ê³  í• ìˆ˜ ìˆì§€ë§Œ..
 
 	}
 <br>
@@ -36,7 +37,7 @@ enumÀÇ ´ÜÁ¡ º¸¿Ï
 
 	int main()
 	{
-		enum class Color				// »ç¿ë ¿µ¿ªÀ» Á¦ÇÑÇØ ¹ö¸²
+		enum class Color				// ì‚¬ìš© ì˜ì—­ì„ ì œí•œí•´ ë²„ë¦¼
 		{
 			RED,
 			BLUE,
@@ -51,19 +52,19 @@ enumÀÇ ´ÜÁ¡ º¸¿Ï
 		Color color = Color::RED;
 		Fruit fruit = Fruit::BANANA;
 
-		if ( color == fruit )			// ÄÄÆÄÀÏµÇÁö ¾ÊÀ½
+		if ( color == fruit )			// ì»´íŒŒì¼ë˜ì§€ ì•ŠìŒ
 			cout << "Color is fruit" << endl; 
 		if ( static_cast<int>(color) == static_cast<int>(fuit) )
-		//ÀÇ ÇüÅÂ·Î ÇÒ¼ö´Â ÀÖÀ¸³ª, ¿ì¸®°¡ ¿øÇÏ´Â ¹Ù´Â ¾Æ´Ï´Ù.
+		//ì˜ í˜•íƒœë¡œ í• ìˆ˜ëŠ” ìˆìœ¼ë‚˜, ìš°ë¦¬ê°€ ì›í•˜ëŠ” ë°”ëŠ” ì•„ë‹ˆë‹¤.
 
-		//°°Àº enumÀÌ¶ó¸é ºñ±³°¡ °¡´ÉÇÑ°¡?
+		//ê°™ì€ enumì´ë¼ë©´ ë¹„êµê°€ ê°€ëŠ¥í•œê°€?
 		Color color1 = Color::RED;
 		Color color2 = Color::BLUE;
 		
 		if( color1 == color2 )
 			cout << "Same color" << endl;
 		else
-			cout << "Is not same color" << endl;	//	ºñ±³ °¡´É
+			cout << "Is not same color" << endl;	//	ë¹„êµ ê°€ëŠ¥
 		
 		return 0;
 	}	
