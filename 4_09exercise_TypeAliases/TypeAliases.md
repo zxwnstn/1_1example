@@ -15,7 +15,7 @@
 		distance_t	home2work;
 		distance_t	home2school;
 
-		//type이 매우 길때
+		//자료형이 매우 길때
 		std::vector<std::pair<std::string, int> >pairlist;
 		vector<pair<string, int> >pairlist 1;
 		vector<pair<string, int> >pairlist 2;
