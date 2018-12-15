@@ -1,6 +1,7 @@
 ## 자료형에게 가명 붙여주기
 
 <br>
+
 	#include<iostream>
 	#include<vector>
 	using namespace std;
