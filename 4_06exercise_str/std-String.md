@@ -1,5 +1,5 @@
-## ¹®ÀÚ¿­ ¼Ò°³
-¹®ÀÚ¿­À» ´Ù·ç´Â µ¥ÀÌÅÍ Å¸ÀÔ std::string
+## ë¬¸ìì—´ ì†Œê°œ
+ë¬¸ìì—´ì„ ë‹¤ë£¨ëŠ” ë°ì´í„° íƒ€ì… std::string
 <br>
 
 ### std::string
@@ -10,62 +10,64 @@
 
 	int main()
 	{
-		//±âº» char ¹æ½Ä
+		//ê¸°ë³¸ char ë°©ì‹
 		cont char my_strs []= "Hello, world"
 
-		//¹®ÀÚ¿­ string
+		//ë¬¸ìì—´ string
 		const string my_hell = "Hello , world";
-		//´Ù¸¥ ÃÊ±âÈ­ ¹æ¹ıÀÌ ¸ğµÎ Àû¿ëµÈ´Ù.
+		//ë‹¤ë¥¸ ì´ˆê¸°í™” ë°©ë²•ì´ ëª¨ë‘ ì ìš©ëœë‹¤.
 		cout << my_hell << endl;
-		//»ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü¿¡ °¡±õ´Ù.
+		//ì‚¬ìš©ì ì •ì˜ ìë£Œí˜•ì— ê°€ê¹ë‹¤.
 
-		//½ºÆ®¸µ ÀÔ·Â¹Ş¾Æ º¸±â1
+		//ìŠ¤íŠ¸ë§ ì…ë ¥ë°›ì•„ ë³´ê¸°1
 		cout << "Your name?: ";
 		string name;
 		cin >> age
 
 		cout << "Your age ? : ";
 		string age
-		cin >> age;				// cinÀÇ °æ¿ì ¶ç¾î¾²±â ±îÁö ÀÔ·ÂÀ» ¹Ş´Â´Ù.
+		cin >> age;				// cinì˜ ê²½ìš° ë„ì–´ì“°ê¸° ê¹Œì§€ ì…ë ¥ì„ ë°›ëŠ”ë‹¤.
 		cout << name << " " << age << end;
 
-		//½ºÆ®¸µ ÀÔ·Â¹Ş¾Æ º¸±â1 ¼öÁ¤
+		//ìŠ¤íŠ¸ë§ ì…ë ¥ë°›ì•„ ë³´ê¸°1 ìˆ˜ì •
 		cout << "Your name?: ";
 		string name;
 		std::getline(std::cin, name);
 
 		cout << "Your age ? : ";
 		string age
-		std::getline(std::cin, age);	// getlineÀÇ °æ¿ì enter±îÁö ÀÔ·ÂÀ» ¹Ş´Â´Ù.
+		std::getline(std::cin, age);		// getlineì˜ ê²½ìš° enterê¹Œì§€ ì…ë ¥ì„ ë°›ëŠ”ë‹¤.
 
 		cout << name << " " << age << end;
 		
-		//½ºÆ®¸µ ÀÔ·Â¹Ş¾Æ º¸±â2
+		//ìŠ¤íŠ¸ë§ ì…ë ¥ë°›ì•„ ë³´ê¸°2
 		cout << "Your age?: ";
 		int age;
 		cin >> age;
 
 		cout << "Your name ?: ";
 		string name
-		std::getline(std::cin, age);	// Àß ¹Ş¾ÆÁöÁö ¾ÊÀ½
+		std::getline(std::cin, age);		// ì˜ ë°›ì•„ì§€ì§€ ì•ŠìŒ
 
 		cout << name << " " << age << end;
 		
-		//½ºÆ®¸µ ÀÔ·Â¹Ş¾Æ º¸±â2 ¼öÁ¤
+		//ìŠ¤íŠ¸ë§ ì…ë ¥ë°›ì•„ ë³´ê¸°2 ìˆ˜ì •
 		cout << "Your age?: ";
 		int age;
 		cin >> age;
-		std::cin.ignore(32767, '\n');	 //  32767°³±îÁöÀÇ ¼ıÀÚÀÔ·ÂÀº ¹«½ÃÇÑ´Ù.
-		/* ¸ÅÁ÷³Ñ¹ö¸¦ ³ÖÁö ¾Ê´Â ¹æ¹ı
-		#include<limits>Çì´õ¸¦ Ãß°¡ÇÏ°í
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n')·Î ¹Ù²Ü¼öµµ ÀÖ´Ù. */
+		std::cin.ignore(32767, '\n');	 	// 32767ê°œê¹Œì§€ì˜ ìˆ«ìì…ë ¥ì€ ë¬´ì‹œí•œë‹¤.
+		/* ë§¤ì§ë„˜ë²„ë¥¼ ë„£ì§€ ì•ŠëŠ” ë°©ë²•
+		#include<limits>í—¤ë”ë¥¼ ì¶”ê°€í•˜ê³ 
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n')ë¡œ ë°”ê¿€ìˆ˜ë„ ìˆë‹¤. */
 
 		cout << "Your name ?: ";
 		string name
 		std::getline(std::cin, age);
 	}
 
-### ¹®ÀÚ¿­ÀÇ °£´ÜÇÑ ¿¬»ê
+<br>
+
+### ë¬¸ìì—´ì˜ ê°„ë‹¨í•œ ì—°ì‚°
 
 	#include<iostream>
 	#include<string>
@@ -73,7 +75,7 @@
 
 	int main()
 	{
-		//¹®ÀÚ¿­ ³¢¸® ´õÇÏ±â
+		//ë¬¸ìì—´ ë¼ë¦¬ ë”í•˜ê¸°
 		string a("Hello");
 		string b("World");
 
@@ -81,9 +83,9 @@
 		stign hw = a + b;
 		hw += "I'm good";
 		
-		cout << hw << endl;		// string¿¡ ¹®ÀÚ¿­À» ´õÇÏ´Â °ÍÀ» append¶ó°í ÇÑ´Ù.
+		cout << hw << endl;		// stringì— ë¬¸ìì—´ì„ ë”í•˜ëŠ” ê²ƒì„ appendë¼ê³  í•œë‹¤.
 
-		//¹®ÀÚ¿­ ±æÀÌ ÃøÁ¤
+		//ë¬¸ìì—´ ê¸¸ì´ ì¸¡ì •
 		string a("Hello, world")
 
 		cout << a.length() << endl;
