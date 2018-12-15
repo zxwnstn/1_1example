@@ -1,5 +1,5 @@
-## ¿­°ÅÇü
-´Ù¾çÇÑ ¼ýÀÚ¸¦ ±âÈ£ÀûÀ¸·Î Ç¥ÇöÇÏ±â À§ÇÑ ÀÚ·áÇü
+## ì—´ê±°í˜•
+ë‹¤ì–‘í•œ ìˆ«ìžë¥¼ ê¸°í˜¸ì ìœ¼ë¡œ í‘œí˜„í•˜ê¸° ìœ„í•œ ìžë£Œí˜•
 
 <br>
 
@@ -8,7 +8,8 @@
 	#include <iostream>
 	#include
 	using namespace std;
-
+	
+	//Enumerated Typeì˜ í•„ìš”ì„±
 	int computeDamage(int weapon_id)
 	{
 		if (weapon_id == 0; )	// sword
@@ -16,30 +17,31 @@
 
 		if (weapon_id == 1; )	// hammer
 		return 2;
-		//ÀÌ·¯ÇÑ ¾ÆÀÌµð¿Í ¿É¼ÇÀ» »ç¶÷Àº ÀÏÀÏÈ÷ ¿Ü¿ì±â Èûµé´Ù.
-	}
+	}				//ì´ëŸ¬í•œ ì•„ì´ë””ì™€ ì˜µì…˜ì„ ì‚¬ëžŒì€ ì¼ì¼ížˆ ì™¸ìš°ê¸° íž˜ë“¤ë‹¤.
 
-	enum Color			// ÀÏÁ¾ÀÇ »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇüÀÌ¶ó°í º¼¼öÀÖ´Ù.
+
+	enum Color			// ì¼ì¢…ì˜ ì‚¬ìš©ìž ì •ì˜ ìžë£Œí˜•ì´ë¼ê³  ë³¼ìˆ˜ìžˆë‹¤.
 	{
 		COLOR_BLACK = -3,
 		COLOR_RED,
 		COLOR_BLUE = 5,
 		COLOR_GREEN = 5,
 		COLOR_SKYBLUE,
-		BLUE			// Ã¹¹øÂ° º¯¼ö¿¡ ÃÊ±âÈ­°¡ ¾ÈµÇ¾ú´Ù¸é, 0ºÎÅÍ ¼ø¼­´ë·Î ¼ýÀÚ°¡ ¹èÁ¤µÈ´Ù.
-						// ¾ïÁö·Î °°Àº °ªÀ» ÁöÁ¤ÇÒ ¼ö ÀÖ´Ù.
-						// °¡±ÞÀû ±âº»ÇÒ´çÀ» »ç¿ëÇÏÀÚ.
-						// ´µ¾Ó½º´Â ¸ÅÅ©·Î¿Í À¯»ç
-	};					// **ÁÖÀÇ!! ;ÀÌ ²À ºÙ¾î¾ß ÇÑ´Ù, ÁÖÀÇ!!**
+		BLUE			// ì²«ë²ˆì§¸ ë³€ìˆ˜ì— ì´ˆê¸°í™”ê°€ ì•ˆë˜ì—ˆë‹¤ë©´, 0ë¶€í„° ìˆœì„œëŒ€ë¡œ ìˆ«ìžê°€ ë°°ì •ëœë‹¤.
+					// ì–µì§€ë¡œ ê°™ì€ ê°’ì„ ì§€ì •í•  ìˆ˜ ìžˆë‹¤.
+					// ê°€ê¸‰ì  ê¸°ë³¸í• ë‹¹ì„ ì‚¬ìš©í•˜ìž.
+					// ë‰˜ì•™ìŠ¤ëŠ” ë§¤í¬ë¡œì™€ ìœ ì‚¬
+	};				// **ì£¼ì˜!! ;ì´ ê¼­ ë¶™ì–´ì•¼ í•œë‹¤, ì£¼ì˜!!**
+
 
 	enum Feeling
 	{
 		HAPPY,
 		JOY,
 		TIRED,
-		BLUE,			// ¸¸¾à ¼­·Î ´Þ¶óº¸ÀÌ´Â ±×·ìÀÇ enumµµ Àü¿ªÃ³·³ ÀÛµ¿ÇÑ´Ù.
-						// µû¶ó¼­ ÀÌ°æ¿ì ÀçÁ¤ÀÇ ÇÏ´Â °ÍÀÌ µÇ¾î, ÄÄÆÄÀÏ µÇÁö ¾Ê´Â´Ù.
-						// ÇØ°á¹æ¹ýÀº ³ªÁß¿¡
+		BLUE,			// ë§Œì•½ ì„œë¡œ ë‹¬ë¼ë³´ì´ëŠ” ê·¸ë£¹ì˜ enumë„ ì „ì—­ì²˜ëŸ¼ ìž‘ë™í•œë‹¤.
+					// ë”°ë¼ì„œ ì´ê²½ìš° ìž¬ì •ì˜ í•˜ëŠ” ê²ƒì´ ë˜ì–´, ì»´íŒŒì¼ ë˜ì§€ ì•ŠëŠ”ë‹¤.
+					// í•´ê²°ë°©ë²•ì€ ë‚˜ì¤‘ì—
 	};
 	
 
@@ -49,24 +51,24 @@
 
 		Color paint = COLOR_BLACK;
 		Color house(COLOR_BLUE);
-		Color appe{COLOR_RED}; // cf) {}¸¦ »ç¿ëÇÏ´Â À¯´ÏÆû ÀÌ´Ï¼È¶óÀÌÁ¦ÀÌ¼ÇÀº ´µ¾Ó½º°¡ Á¶±Ý ´Ù¸£´Ù.
+		Color appe{COLOR_RED}; 	// cf) {}ë¥¼ ì‚¬ìš©í•˜ëŠ” ìœ ë‹ˆí¼ ì´ë‹ˆì…œë¼ì´ì œì´ì…˜ì€ ë‰˜ì•™ìŠ¤ê°€ ì¡°ê¸ˆ ë‹¤ë¥´ë‹¤.
 
 		cout << paint << endl;
 		cout << house << endl;
 		cout << appe << endl;
 
-		//enum ÀÚ·á¸¦ int ÀÚ·áÇüÀ¸·Î ¾µ¼ö ÀÖ´Â°¡?
+		//enum ìžë£Œë¥¼ int ìžë£Œí˜•ìœ¼ë¡œ ì“¸ìˆ˜ ìžˆëŠ”ê°€?
 		int color_id = COLOR_RED;
-		cout << colo_id << endl;	// ÀßµÊ
-		Color my_color = 3;			// Àº ¾ÈµÊ
-		Color my_color = static_cast<Color>(3); // Ä³½ºÆÃÀº µÊ
+		cout << colo_id << endl;		// ìž˜ë¨
+		Color my_color = 3;			// ì€ ì•ˆë¨
+		Color my_color = static_cast<Color>(3); // ìºìŠ¤íŒ…ì€ ë¨
 		
 		
-		//cinÀ¸·Î ¹ÞÀ»¼ö ÀÖ³ª?
-		cin >> my_color ¾ÈµÊ
+		//cinìœ¼ë¡œ ë°›ì„ìˆ˜ ìžˆë‚˜?
+		cin >> my_color 			// ì•ˆë¨
 		
 		
-		//¿ìÈ¸´Â °¡´É
+		//ìš°íšŒëŠ” ê°€ëŠ¥
 		int in_number;
 		cin >> in_number;
 
@@ -74,14 +76,18 @@
 			my_color = COLOR_BLACK;
 		//
 		if (in_number == static_cast<Color>(0))
-			my_color = static_cast<Color>(0);		// ÀÌ·±½ÄÀ¸·Î ÇÒ ¼ö´Â ÀÖ´Ù.
-
-		// stringÀ¸·Î ÀÔ·Â¹Þ±â
-		#include<string>  Çì´õ Ãß°¡
+			my_color = static_cast<Color>(0);	// ì´ëŸ°ì‹ìœ¼ë¡œ í•  ìˆ˜ ìžˆë‹¤.
+		//... ê° ìˆ˜ì— ëŒ€ì‘í•˜ëŠ” if ë§Œë“¤ê¸°
+		
+		
+		// stringìœ¼ë¡œ ìž…ë ¥ë°›ê¸°
+		#include<string>  í—¤ë” ì¶”ê°€
 
 		string str_input;
 		std::getline(cin, str_input);
 
-		if (str_input == "COLOR_BLACK")			// ¿ÀÅ¸ÀÇ °¡´É¼ºÀÌ ³Ê¹« ³ô¾Æ¼­ ÃßÃµÇÏÁö ¾Ê´Â´Ù.
+		if (str_input == "COLOR_BLACK")			// ì˜¤íƒ€ì˜ ê°€ëŠ¥ì„±ì´ ë„ˆë¬´ ë†’ì•„ì„œ ì¶”ì²œí•˜ì§€ ì•ŠëŠ”ë‹¤.
 			my_color = static_cast<Color>(0);
+			
+		return 0;
 	}
