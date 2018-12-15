@@ -53,9 +53,9 @@
 		Color house(COLOR_BLUE);
 		Color appe{COLOR_RED}; 	// cf) {}를 사용하는 유니폼 이니셜라이제이션은 뉘앙스가 조금 다르다.
 
-		cout << paint << endl;
-		cout << house << endl;
-		cout << appe << endl;
+		cout << paint << endl;			// 0
+		cout << house << endl;			// 2
+		cout << appe << endl;			// 1
 
 		//enum 자료를 int 자료형으로 쓸수 있는가?
 		int color_id = COLOR_RED;
