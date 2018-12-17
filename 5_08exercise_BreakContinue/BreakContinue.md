@@ -1,5 +1,7 @@
 ## Break와 Continue
 
+<br>
+
 ### Break
 
 	int main()
@@ -12,6 +14,9 @@
 			count ++	
 		}
 	}
+
+<br>
+
 ### 함수에서의 break와 return
 
 	void breakOrReturn()
@@ -34,6 +39,8 @@
 		breakOrReturn();
 		return 0;
 	}
+
+<br>
 
 ### Continue 사용
 	int main()
