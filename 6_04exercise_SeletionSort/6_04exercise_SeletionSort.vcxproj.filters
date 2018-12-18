@@ -15,8 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="array1.md">
+    <None Include="SeletionSort.md">
       <Filter>소스 파일</Filter>
-    </Text>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="6_04ex.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
