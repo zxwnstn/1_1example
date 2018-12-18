@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="array1_md">
+    <None Include="array2.md">
       <Filter>소스 파일</Filter>
-    </Text>
+    </None>
   </ItemGroup>
 </Project>
