@@ -1,0 +1,50 @@
+## 단항 연산자 오버로딩
+-(반환 -something)와 !(반환 ture, false)
+
+###
+	#include<iostream>
+	using namespace std;
+
+	class Cents
+	{
+	private:
+		int m_cents;
+	public:
+		Cents(int cents = 0){ m_cents = cents; }
+		int getCents() const { return m_cents; }
+		int& getCents() { return m_cents; }
+
+		// - 오퍼레이터
+		Cents operator - () const
+		{
+			return Cents(-m_cents);
+		}
+
+		// ! 오퍼레이터
+		// 프로그래밍 목적에따라 구현해야한다
+		// condition오퍼레이터와 if를 쓸수 있다.
+		bool operator ! () const
+		{
+			return (m_cents == 0) ? ture : false;
+		}
+
+		friend ostream operator << (ostream &out, const Cents cents)
+		{
+			out << cents.m_cents;
+			retunr out;
+		}
+	};
+
+	{
+		Cents cents1(6);
+		Cents cents2(0);
+
+		cout << cents1 << endl;
+		cout << -cents1 << endl;
+		cout << -Cents(-10) << endl;
+
+		auto temp = !cents1;		//불타입으로 리턴된다.
+		cout << !cents1 << " " << !cents2 << endl;	// 0 1
+
+
+	}

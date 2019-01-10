@@ -1,0 +1,112 @@
+## 비교 연산자 오버로딩 하기
+std sort를 이용하기 위한 크기 비교 연산자 구현하기!
+
+### 
+	#include<iostream>
+	using namespace std;
+
+	class Cents
+	{
+	private
+		int m_value;
+	public
+		Cents(int value = 0){ m_value = value; }
+
+		friend ostream& operator << (ostream &out, const Cents &cents)
+		{
+			out << cents.m_value;
+			return out;
+		}
+
+		// == 연산자 만들기
+		friend bool operator == (const Cents &cents1, const Cents &cents2)
+		{
+			return cents1.m_value == cents2.m_value;
+		}
+
+		// != 연산자 만들기
+		bool operator != (const Cents &cents2)
+		{
+			retunr this->m_value != cents2.m_value;
+		}
+	};
+
+	int main()
+	{
+		Cents cents1(6);
+		Cents cents2(0);
+	}
+
+	// < , > 연산자 오버로딩
+	#include<iostream>
+	#include<vector>
+	#include<algorithm>
+	using namespace std;
+
+	class Cents
+	{
+	private:
+		int m_value;
+	public:
+		Cents(const int value = 0) { m_value = value};
+
+		int& getCents()
+		{
+			return m_value;
+		}
+
+		friend ostream operator << (ostream &out, const Cents &cents )
+		{
+			out << cents.m_value;
+			return out;
+		}
+	};
+
+	int main()
+	{
+		vector<Cents> arr(20);
+		for(unsinged i = 0; i < 20; i++)
+			arr[i].getCents() = i;
+		random_shuffle(arr.begin(), arr.end());
+		for(auto &e : arr)
+			cout << e << " ";
+		cout << endl;
+
+		sort(arr.begin(), arr.end());
+		for(auto &e : arr)
+			cout << e << " ";
+		cout << endl;			//무시무시해 보이는 오류가 생긴다만..
+		// 단지 크기 비교하는 오퍼레이터가 오버로딩이 안되있어서 그렇다..
+	}
+
+	//크기 비교 < , >연산자 오버로딩 해주기
+	class Cents
+	{
+	private:
+		int m_value;
+	public:
+		Cents(const int value = 0) { m_value = value};
+
+		int& getCents()
+		{
+			return this->m_value;
+		}
+
+		friend ostream operator << (ostream &out, const Cents &cents )
+		{
+			out << cents.m_value;
+			return out;
+		}
+
+		friend bool operator > (const Cents &cents1, const Cents &cents2)
+		{
+			return cents1.m_value > cents2.m_value;
+		}//이것만 가지고는 부족..
+
+		friend bool operator < (const Cents &cents1, const Cents &cents2)
+		{
+			return cents1.m_value < cents2.m_value;
+		}
+		//뒤집으면 정렬이 반대로
+		//하지만 실제 이런식으로 구현했다간... 무시무시한 버그가 발생될수있으니 주의!
+	};

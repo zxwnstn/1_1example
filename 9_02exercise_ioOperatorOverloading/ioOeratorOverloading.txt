@@ -1,0 +1,145 @@
+## 입출력 연산자 오버로딩 하기
+아주 편함
+
+###
+	#include<iostream>
+	using namespace std;
+
+	clas Point
+	{
+	private:
+		double m_x, m_y, m_z;
+
+	public:
+		point(double x = 0.0, double y= 0.0, double z =  0.0)
+			: m_x(x), m_y(y), m_z(z)
+		{}
+
+		double getX() { return m_x; }
+		double getY() { return m_y; }
+		double getZ() { return m_z; }
+
+		void print()		// 일반적인 아웃풋 함수 
+		{
+			cout << m_x << " " << m_y << m_z << endl;
+		}
+	};
+
+	int main()
+	{
+		point p1(0.0, 0.1, 0.2), p2(3.4, 1.5, 2.0);
+		p1.print();
+		p2.print();
+		cout << endl;
+
+		cout << p1 << p2 << endl; // 이렇게 쓸수는 없을까?
+	}
+
+	//
+	clas Point
+	{
+	private:
+		double m_x, m_y, m_z;
+
+	public:
+		point(double x = 0.0, double y= 0.0, double z =  0.0)
+			: m_x(x), m_y(y), m_z(z)
+		{}
+
+		double getX() { return m_x; }
+		double getY() { return m_y; }
+		double getZ() { return m_z; }
+
+		friend std::ostream& operator << (std::ostream &out, const Point &point)	//연쇄출력을 위해
+		{
+			out << point.m_x << " " << point.m_y << " " << point.m_z;
+
+			return out;
+		}
+	};
+
+	int main()
+	{
+		point p1(0.0, 0.1, 0.2), p2(3.4, 1.5, 2.0);
+
+		cout << p1 << " " << p2 << endl;
+	}
+	
+	
+	// 장점 파일출력을 그대로 할수있다!
+	#include <fstream>
+	clas Point
+	{
+	private:
+		double m_x, m_y, m_z;
+
+	public:
+		point(double x = 0.0, double y= 0.0, double z =  0.0)
+			: m_x(x), m_y(y), m_z(z)
+		{}
+
+		double getX() { return m_x; }
+		double getY() { return m_y; }
+		double getZ() { return m_z; }
+
+		friend std::ostream& operator << (std::ostream &out, const Point &point)
+		{
+			out << point.m_x << " " << point.m_y << " " << point.m_z;
+
+			return out;
+		}
+	};
+
+	int main()
+	{
+		ofstream of("out.txt");
+
+		point p1(0.0, 0.1, 0.2), p2(3.4, 1.5, 2.0);
+
+		cout << p1 << " " << p2 << endl;
+		of << p1 << " " << p2 << endl;
+
+		of.close();
+		
+		return 0;
+	}
+	
+	//in 해보기
+	clas Point
+	{
+	private:
+		double m_x, m_y, m_z;
+
+	public:
+		point(double x = 0.0, double y= 0.0, double z =  0.0)
+			: m_x(x), m_y(y), m_z(z)
+		{}
+
+		double getX() { return m_x; }
+		double getY() { return m_y; }
+		double getZ() { return m_z; }
+
+		friend std::ostream& operator << (std::ostream &out, const Point &point)
+		{
+			out << point.m_x << " " << point.m_y << " " << point.m_z;
+
+			return out;
+		}
+
+		frined istream& operator >> (istream &in, Point &point) // 입력받을걸 const로 할순 없다..
+		{
+			in >> point.m_x >> point.m_y >> point.m_z;
+
+			return in;
+		}
+	};
+
+	int main()
+	{
+		Point p1, p2;
+
+		cin >> p1, p2;
+		cout << p1 << " " << p2 << endl;
+
+		return 0;
+	}
